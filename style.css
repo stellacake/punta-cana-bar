@@ -1,0 +1,11 @@
+:root {
+    --main-color: blue ;
+    --secondary-color: orange ;
+    --light: #F3F3F3;
+    --dark: #26262b;
+    --text-font: arial ;
+    --title-font: 'Cinzel Decorative', cursive;
+    --text-font-size: 14px;
+    --title-font-size: 18px ;
+    --spacing: 8px;
+}
