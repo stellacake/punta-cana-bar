@@ -1,11 +1,47 @@
 :root {
-    --main-color: blue ;
-    --secondary-color: orange ;
-    --light: #F3F3F3;
-    --dark: #26262b;
-    --text-font: arial ;
-    --title-font: 'Cinzel Decorative', cursive;
-    --text-font-size: 14px;
-    --title-font-size: 18px ;
-    --spacing: 8px;
+  --main-color: blue ;
+  --secondary-color: orange ;
+  --light: #F3F3F3;
+  --dark: #26262b;
+  --text-font: arial ;
+  --title-font: 'Cinzel Decorative', cursive;
+  --text-font-size: 14px;
+  --title-font-size: 18px ;
+  --spacing: 8px;
+  --formWidth: 100%;
+  --formMargin: 8px 0;
+  --formPadding: 8px 20px;
+}
+
+.contact {
+display: grid;
+justify-content: center;
+box-sizing: content-box;
+}
+
+.form {
+font-size: var(--text-font-size);
+text-font: var(--text-font);
+box-sizing: border-box;
+}
+
+input {
+box-sizing: border-box;
+width: var(--formWidth);
+padding: var(--formPadding);
+margin: var(--formMargin);
+}
+
+select {
+box-sizing: border-box;
+width: var(--formWidth);
+padding: var(--formPadding);
+margin: var(--formMargin);
+}
+
+textarea {
+box-sizing: border-box;
+width: var(--formWidth);
+padding: var(--formPadding);
+margin: var(--formMargin);
 }
