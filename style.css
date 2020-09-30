@@ -1,13 +1,16 @@
 :root {
-    --main-color: blue ;
-    --secondary-color: orange ;
-    --light: #F3F3F3;
-    --dark: #26262b;
-    --text-font: arial ;
-    --title-font: 'Cinzel Decorative', cursive;
-    --text-font-size: 14px;
-    --title-font-size: 18px ;
-    --spacing: 8px;
+  --main-color: blue ;
+  --secondary-color: orange ;
+  --light: #F3F3F3;
+  --dark: #26262b;
+  --text-font: arial ;
+  --title-font: 'Cinzel Decorative', cursive;
+  --text-font-size: 14px;
+  --title-font-size: 18px ;
+  --spacing: 8px;
+  --formWidth: 100%;
+  --formMargin: 8px 0;
+  --formPadding: 8px 20px;
 }
 
 h2 {
@@ -41,4 +44,63 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
+}
+
+.contact_style {
+  box-sizing: border-box;
+  width: var(--formWidth);
+  padding: var(--formPadding);
+  margin: var(--formMargin);
+}
+
+.contact {
+  display: grid;
+  justify-content: center;
+}
+
+.map {
+  background-color: var(--secondary-color);
+  border: solid var(--main-color);
+  border-bottom: none;
+}
+
+.info {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-right: solid var(--main-color);
+  border-left: solid var(--main-color);
+}
+
+span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.form {
+  display: grid;
+  justify-content: center;
+  box-sizing: content-box;
+  font-size: var(--text-font-size);
+  font: var(--text-font);
+  background-color: var(--secondary-color);
+  border: solid var(--main-color);
+  border-top: none;
+}
+
+.formButton {
+  display: grid;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  border: solid var(--main-color);
+  border-radius: 25px;
+  padding: 10px;
+  padding: var(--formPadding);
+  margin: var(--formMargin);
+}
+
+button:hover {
+  border-color: var(--secondary-color);
 }
