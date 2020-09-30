@@ -21,8 +21,8 @@
 }
 
 .contact {
-display: grid;
-justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 .map {
@@ -44,30 +44,30 @@ span {
 }
 
 .form {
-display: grid;
-justify-content: center;
-box-sizing: content-box;
-font-size: var(--text-font-size);
-font: var(--text-font);
-background-color: var(--secondary-color);
-border: solid var(--main-color);
-border-top: none;
+  display: grid;
+  justify-content: center;
+  box-sizing: content-box;
+  font-size: var(--text-font-size);
+  font: var(--text-font);
+  background-color: var(--secondary-color);
+  border: solid var(--main-color);
+  border-top: none;
 }
 
 .formButton {
-display: grid;
-justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 button {
-cursor: pointer;
-border: solid var(--main-color);
-border-radius: 25px;
-padding: 10px;
-padding: var(--formPadding);
-margin: var(--formMargin);
+  cursor: pointer;
+  border: solid var(--main-color);
+  border-radius: 25px;
+  padding: 10px;
+  padding: var(--formPadding);
+  margin: var(--formMargin);
 }
 
 button:hover {
-border-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
