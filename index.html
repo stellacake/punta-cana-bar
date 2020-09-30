@@ -16,7 +16,36 @@
     <section class="about"></section>
     <section class="menu"></section>
     <section class="events"></section>
-    <section class="contact"></section>
+
+    <section class="contact">
+        <form class = "form">
+            <div class = "formName">
+                <label for = "name">Nom:</label>
+                <input id = "name">
+            </div>
+            <div class ="formMail">
+                <label for = "email">E-mail:</label>
+                <input id = "email">
+            </div>
+            <div class ="formSelect">
+                <label for = "purpose"></label>
+                <select id = "purpose">
+                    <option value="">--Sélection--</option>
+                    <option value= "reserve">Réservation</option>
+                    <option value= "question">Une question?</option>
+                    <option value= "apply">Postuler</option>
+                    <option value= "event">Vous souhaitez proposer un événement?</option>
+                </select>
+            </div>
+            <div class = "formMsg">
+                <label for = "msg"></label>
+                <textarea id = "msg"></textarea>
+            </div>
+            <div class ="formButton">
+                <button type = "submit">Envoyer</button>
+        </form>
+    </section>
+
     <footer></footer>
     <script src="script.js"></script>
 </body>
