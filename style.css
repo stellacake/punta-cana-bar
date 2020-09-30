@@ -16,13 +16,15 @@
 .contact {
 display: grid;
 justify-content: center;
-box-sizing: content-box;
+grid-gap: 20px;
 }
 
 .form {
+display: grid;
+justify-content: center;
+box-sizing: content-box;
 font-size: var(--text-font-size);
-text-font: var(--text-font);
-box-sizing: border-box;
+font: var(--text-font);
 }
 
 input {
@@ -44,4 +46,22 @@ box-sizing: border-box;
 width: var(--formWidth);
 padding: var(--formPadding);
 margin: var(--formMargin);
+}
+
+.formButton {
+display: grid;
+justify-content: center;
+}
+
+button {
+cursor: pointer;
+border: solid var(--main-color);
+border-radius: 50%;
+padding: 10px;
+padding: var(--formPadding);
+margin: var(--formMargin);
+}
+
+button:hover {
+border-color: var(--secondary-color);
 }
