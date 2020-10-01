@@ -52,7 +52,6 @@ h2 {
 }
 
 #burgerToggle {
-  display: block;
   position: fixed;
   top: 50px;
   left: 50px;
@@ -64,7 +63,7 @@ h2 {
 #burgerToggle a
 {
   text-decoration: none;
-  color: var(--dark);
+  color: var(--secondary-color);
   transition: color 0.3s ease;
 }
 
@@ -97,7 +96,7 @@ h2 {
   padding: 50px;
   padding-top: 125px;
   
-  background: var(--secondary-color);
+  background: var(--main-color);
   list-style-type: none;
   opacity: 0.9;
   
@@ -254,6 +253,7 @@ margin: calc(var(--spacing)/2) 0 0 0;
 
 .map {
   background-color: var(--secondary-color);
+  box-sizing: border-box;
 }
 
 .info {
@@ -270,10 +270,11 @@ margin: calc(var(--spacing)/2) 0 0 0;
 .form {
   display: block;
   justify-content: center;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-size: var(--text-font-size);
   font: var(--text-font);
   background-color: var(--secondary-color);
+  padding: 10px;
 }
 
 .form input, select {

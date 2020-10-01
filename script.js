@@ -24,6 +24,11 @@ polaroids.forEach(item => {
 // end of events section
 
 // contact section
-button = document.getElementById("button");
-button.addEventListener("click", () => alert("Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"))
+
+const form = document.getElementById("form");
+form.onsubmit = function(event) {
+  event.preventDefault();
+  alert("Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !");
+}
+
 // end of contact section
