@@ -2,10 +2,20 @@
 
 // floating contact button
 
+// let contactButton = document.getElementById("contact-button");
+
+// document.addEventListener(scrollY, fade() { 
+//   if (scrollY >= 400) {
+//     contactButton.classList.add("floating-contact-button-fade-out");
+//   } else {
+//     contactButton.classList.remove("floating-contact-button-fade-out");
+//   }
+// });
+
 // end of floating contact button
 
 // events section
-var polaroids = document.querySelectorAll('.events-week-day');
+let polaroids = document.querySelectorAll('.events-week-day');
 
 polaroids.forEach(item => {
   const randomRotation = Math.floor(Math.random() * (6 - -6 + 1) + -6);
