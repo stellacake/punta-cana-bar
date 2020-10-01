@@ -178,7 +178,7 @@ h2 {
 /* events section */
 .events {
   width: 100%;
-  min-height: 100vw;
+  height: auto;
   padding: var(--spacing);
   background-color: var(--secondary-color);
 }
@@ -294,3 +294,28 @@ button:hover {
   border-color: var(--secondary-color);
 }
 /* end of contact section */
+
+/* footer */
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: var(--dark);
+  line-height: 25px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer p {
+  font-size: 20px;
+  margin-top: 0px;
+  color: var(--light);
+}
+
+.icon {
+  width: 30px;
+  height : 30px;
+  fill: var(--light);
+}
+/* end of footer */
