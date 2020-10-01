@@ -301,7 +301,10 @@ margin: calc(var(--spacing)/2) 0 0 0;
 }
 
 .form input, select {
-  border-radius: 10px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
 }
 
 .formButton {
@@ -332,7 +335,6 @@ footer {
   margin: 0px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
 }
 footer p {
