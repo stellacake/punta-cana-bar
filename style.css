@@ -26,6 +26,27 @@ h2 {
     padding: 0;
   }
 
+/* beginning of HOME section */
+.home {
+  background-image: linear-gradient(rgba(0, 0, 29, 0.856), rgba(18, 9, 61, 0.671)), url("https://fastly.4sqi.net/img/general/600x600/38168747_5cQcwEpfouMfTwqoxEsdRtKNItq2IvJR6uncRZeHnVI.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: var(--spacing);
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-img {
+  width: 250px;
+}
+/* end of HOME section */
+
 /* beginning of ABOUT section */
 .about {
     background-image: linear-gradient(rgba(13, 13, 73, 0.836), rgba(68, 45, 97, 0.555)),
