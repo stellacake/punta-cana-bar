@@ -2,14 +2,15 @@
 
 // floating contact button
 
-const contactButton = document.getElementById("contact-button");
-document.addEventListener('posScroll', function(){
-  if (posScroll >= 1000){
-  contactButton.classList.add("floating-contact-button-fade-out").fadeOut(600);
-  } else { 
-    contactButton.fadeIn(600);
-  }
-})
+// let contactButton = document.getElementById("contact-button");
+
+// document.addEventListener(scrollY, fade() { 
+//   if (scrollY >= 400) {
+//     contactButton.classList.add("floating-contact-button-fade-out");
+//   } else {
+//     contactButton.classList.remove("floating-contact-button-fade-out");
+//   }
+// });
 
 // end of floating contact button
 
