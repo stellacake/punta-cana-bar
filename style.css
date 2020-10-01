@@ -50,7 +50,7 @@ h2 {
 
 #burgerToggle {
   display: block;
-  position: relative;
+  position: fixed;
   top: 50px;
   left: 50px;
   z-index: 1;
@@ -70,7 +70,6 @@ h2 {
 
 #burgerToggle input
 {
-  display: block;
   width: 40px;
   height: 32px;
   position: fixed;
@@ -174,62 +173,6 @@ h2 {
 
 /* end of floating contact button */
 
-/* contact section  */
-.contact_style {
-  box-sizing: border-box;
-  width: var(--formWidth);
-  padding: var(--formPadding);
-  margin: var(--formMargin);
-}
-
-.contact {
-  display: grid;
-  justify-content: center;
-}
-
-.map {
-  background-color: var(--secondary-color);
-  border: solid var(--main-color);
-  border-bottom: none;
-}
-
-.info {
-  background-color: var(--secondary-color);
-  padding: 10px;
-  border-right: solid var(--main-color);
-  border-left: solid var(--main-color);
-}
-
-.form {
-  display: grid;
-  justify-content: center;
-  box-sizing: content-box;
-  font-size: var(--text-font-size);
-  font: var(--text-font);
-  background-color: var(--secondary-color);
-  border: solid var(--main-color);
-  border-top: none;
-}
-
-.formButton {
-  display: grid;
-  justify-content: center;
-}
-
-button {
-  cursor: pointer;
-  border: solid var(--main-color);
-  border-radius: 25px;
-  padding: 10px;
-  padding: var(--formPadding);
-  margin: var(--formMargin);
-}
-
-button:hover {
-  border-color: var(--secondary-color);
-}
-/* end of contact section */
-
 /* events section */
 .events {
   width: 100%;
@@ -287,3 +230,65 @@ margin: calc(var(--spacing)/2) 0 0 0;
 }
 /* end of events section */
 
+/* contact section  */
+
+.contact_style {
+  box-sizing: border-box;
+  width: var(--formWidth);
+  padding: var(--formPadding);
+  margin: var(--formMargin);
+}
+
+.contact {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map {
+  background-color: var(--secondary-color);
+}
+
+.info {
+  box-sizing: border-box;
+  display: block;
+  background-color: var(--secondary-color);
+}
+
+.info p {
+  text-align: left;
+  padding: 20px;
+}
+
+.form {
+  display: block;
+  justify-content: center;
+  box-sizing: content-box;
+  font-size: var(--text-font-size);
+  font: var(--text-font);
+  background-color: var(--secondary-color);
+}
+
+.form input, select {
+  border-radius: 10px;
+}
+
+.formButton {
+  display: block;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  border: solid var(--main-color);
+  border-radius: 25px;
+  padding: 10px;
+  padding: var(--formPadding);
+  margin: var(--formMargin);
+}
+
+button:hover {
+  border-color: var(--secondary-color);
+}
+/* end of contact section */
