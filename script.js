@@ -2,10 +2,19 @@
 
 // floating contact button
 
+const contactButton = document.getElementById("contact-button");
+document.addEventListener('posScroll', function(){
+  if (posScroll >= 1000){
+  contactButton.classList.add("floating-contact-button-fade-out").fadeOut(600);
+  } else { 
+    contactButton.fadeIn(600);
+  }
+})
+
 // end of floating contact button
 
 // events section
-var polaroids = document.querySelectorAll('.events-week-day');
+let polaroids = document.querySelectorAll('.events-week-day');
 
 polaroids.forEach(item => {
   const randomRotation = Math.floor(Math.random() * (6 - -6 + 1) + -6);
