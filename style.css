@@ -14,13 +14,104 @@
   --formPadding: 8px 20px;
 }
 
-h2 {
-    font-family: var(--title-font);
+body
+{
+  margin: 0;
+  padding: 0;
+  background: var(--secondary-color);
+  color: var(--dark);
+  font-family: var(--dark);
+  text-align: center;
 }
 
-/* section à propos */
+h2 {
+    font-family: var(--title-font);
+    font-size: calc(var(--title-font-size) * 2);
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+/* beginning BURGER section */
+
+#burgerLogo {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+
+}
+
+#burgerToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+#burgerToggle a
+{
+  text-decoration: none;
+  color: var(--dark);
+  transition: color 0.3s ease;
+}
+
+#burgerToggle a:hover
+{
+  color: var(--light);
+}
+
+#burgerToggle input
+{
+  width: 40px;
+  height: 32px;
+  position: fixed;
+  top: 35px;
+  right: 35px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2; 
+}
+
+#burgerMenu
+{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  margin: -100px 0 0 93rem;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: var(--secondary-color);
+  list-style-type: none;
+  opacity: 0.9;
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#burgerToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* end BURGER section */
+
+
+/* beginning of ABOUT section */
 .about {
-    background-image: linear-gradient(rgba(13, 0, 58, 0.644), rgba(255, 203, 60, 0.089)),
+    background-image: linear-gradient(rgba(13, 13, 73, 0.836), rgba(68, 45, 97, 0.555)),
     url("https://media.pri.org/s3fs-public/story/images/TIKI-PHOTO-7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,9 +125,14 @@ h2 {
     padding: calc(var(--spacing) * 2);
 }
 
+.about h2 {
+  margin-bottom: var(--spacing);
+}
+
 .img-cocktails-counter {
     height: 200px;
     transform: rotate(-4deg);
+    margin: var(--spacing) 0 calc(var(--spacing) * 2) 0;
 }
 
 .img-toast-box {
@@ -46,14 +142,10 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
+    margin-top: calc(var(--spacing) * 2);
 }
-/* fin section about*/
+/* end of ABOUT section */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
 /* floating contact button */
 .floating-contact-button {
   z-index: 1;
@@ -80,67 +172,6 @@ h2 {
 }
 
 /* end of floating contact button */
-
-/* contact section  */
-.contact_style {
-  box-sizing: border-box;
-  width: var(--formWidth);
-  padding: var(--formPadding);
-  margin: var(--formMargin);
-}
-
-.contact {
-  display: grid;
-  justify-content: center;
-}
-
-.map {
-  background-color: var(--secondary-color);
-  border: solid var(--main-color);
-  border-bottom: none;
-}
-
-.info {
-  background-color: var(--secondary-color);
-  padding: 10px;
-  border-right: solid var(--main-color);
-  border-left: solid var(--main-color);
-}
-
-span {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.form {
-  display: grid;
-  justify-content: center;
-  box-sizing: content-box;
-  font-size: var(--text-font-size);
-  font: var(--text-font);
-  background-color: var(--secondary-color);
-  border: solid var(--main-color);
-  border-top: none;
-}
-
-.formButton {
-  display: grid;
-  justify-content: center;
-}
-
-button {
-  cursor: pointer;
-  border: solid var(--main-color);
-  border-radius: 25px;
-  padding: 10px;
-  padding: var(--formPadding);
-  margin: var(--formMargin);
-}
-
-button:hover {
-  border-color: var(--secondary-color);
-}
-/* end of contact section */
 
 /* events section */
 .events {
@@ -198,3 +229,66 @@ img:hover {
 margin: calc(var(--spacing)/2) 0 0 0;
 }
 /* end of events section */
+
+/* contact section  */
+
+.contact_style {
+  box-sizing: border-box;
+  width: var(--formWidth);
+  padding: var(--formPadding);
+  margin: var(--formMargin);
+}
+
+.contact {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map {
+  background-color: var(--secondary-color);
+}
+
+.info {
+  box-sizing: border-box;
+  display: block;
+  background-color: var(--secondary-color);
+}
+
+.info p {
+  text-align: left;
+  padding: 20px;
+}
+
+.form {
+  display: block;
+  justify-content: center;
+  box-sizing: content-box;
+  font-size: var(--text-font-size);
+  font: var(--text-font);
+  background-color: var(--secondary-color);
+}
+
+.form input, select {
+  border-radius: 10px;
+}
+
+.formButton {
+  display: block;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  border: solid var(--main-color);
+  border-radius: 25px;
+  padding: 10px;
+  padding: var(--formPadding);
+  margin: var(--formMargin);
+}
+
+button:hover {
+  border-color: var(--secondary-color);
+}
+/* end of contact section */
