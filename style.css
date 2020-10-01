@@ -16,9 +16,17 @@
 
 h2 {
     font-family: var(--title-font);
+    font-size: calc(var(--title-font-size) * 2);
+    text-align: center;
 }
 
-/* section à propos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+/* beginning of ABOUT section */
 .about {
     background-image: linear-gradient(rgba(13, 0, 58, 0.644), rgba(255, 203, 60, 0.089)),
     url("https://media.pri.org/s3fs-public/story/images/TIKI-PHOTO-7.jpg");
@@ -34,9 +42,14 @@ h2 {
     padding: calc(var(--spacing) * 2);
 }
 
+.about h2 {
+  margin-bottom: var(--spacing);
+}
+
 .img-cocktails-counter {
     height: 200px;
     transform: rotate(-4deg);
+    margin: var(--spacing) 0 calc(var(--spacing) * 2) 0;
 }
 
 .img-toast-box {
@@ -46,14 +59,10 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
+    margin-top: calc(var(--spacing) * 2);
 }
-/* fin section about*/
+/* end of ABOUT section */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
 /* floating contact button */
 .floating-contact-button {
   z-index: 1;
