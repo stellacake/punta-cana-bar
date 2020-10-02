@@ -10,17 +10,219 @@
     />
     <title>Punta Cana Bar</title>
   </head>
+
   <body>
     <header>
       <h1></h1>
-      <nav></nav>
+      <nav id="burgerToggle">
+        <input type="checkbox" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+          alt="menu icon"
+          id="burgerLogo"
+        />
+        <ul id="burgerMenu">
+          <a href="#home">
+            <li>Bienvenue</li>
+          </a>
+          <a href="#about">
+            <li>Le bar</li>
+          </a>
+          <a href="#menu">
+            <li>La carte</li>
+          </a>
+          <a href="#events">
+            <li>Nos événements</li>
+          </a>
+          <a href="#contact">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
     </header>
-    <section class="home"></section>
-    <section class="about"></section>
-    <section class="menu">Notre carte...</section>
-    <section class="events"></section>
-    <section class="contact"></section>
-    <footer></footer>
+
+    <a href="#contact">
+      <div class="floating-contact-button">
+        <p>Réservez !</p>
+      </div>
+    </a>
+
+    <section class="home">
+      <div class="logo-container">
+        <img
+          src="./imgs/logo-tmp.png"
+          class="logo-img"
+          alt="verre à cocktail agité derrière le nom Punta Cana Bar"
+        />
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-box">
+        <img
+          src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/p960x960/60085929_2316955428576913_4503917751303143424_o.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=-jx3IjPHOu8AX9MvdhQ&_nc_ht=scontent-cdg2-1.xx&tp=6&oh=882b6ad5ce0717c38d14241a47988889&oe=5F988637"
+          alt="cocktails and bottles on a bar counter"
+          class="img-cocktails-counter"
+        />
+        <h2>À propos</h2>
+        <p>
+          Profitez de notre bar à tapas latino et de ses animations ! Nous
+          proposons des spécialités de la République dominicaine, des cours de
+          danse et beaucoup d'autres choses !
+        </p>
+        <div class="img-toast-box"></div>
+      </div>
+    </section>
+    <section class="menu" id="menu"></section>
+
+    <section class="events" id="events">
+      <h2>Événements</h2>
+      <p class="events-subtitle">
+        Ce qu'on aime au Punta Cana Bar, c'est vous voir vous amuser&nbsp;!
+      </p>
+      <p class="events-subtitle">
+        Du coup, on fait tout pour vous tenir occupés ;)
+      </p>
+      <p class="events-subtitle">
+        Découvrez donc nos rendez-vous hebdomadaires...
+      </p>
+      <ul class="events-week">
+        <li class="events-week-day">
+          <div class="day-header">
+            <img
+              src="https://classpass-res.cloudinary.com/image/upload/f_auto,q_auto/ldra8xdrnlkmqbjhjamh.png"
+              alt="photo soirée dansante"
+            />
+          </div>
+          <div class="day-body">
+            <h3>Mercredi</h3>
+            <p>
+              On se déhanche&nbsp;! Profitez de la présence de Cédric Catala,
+              notre prof officiel, pour parfaire vos pas de danse&nbsp;!
+            </p>
+            <p>20h&nbsp;: Bachata // 21h&nbsp;: Salsa</p>
+          </div>
+        </li>
+        <li class="events-week-day">
+          <div class="day-header">
+            <img
+              src="https://images.unsplash.com/photo-1543282687-75e5cb83c585?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
+              alt="photo DJ"
+            />
+          </div>
+          <div class="day-body">
+            <h3>Jeudi</h3>
+            <p>
+              ¡Fiesta latina! Avec DJ el Nybra aux plantines, (re)dégustez
+              emmpanadas, papas rellenas et plein d'autres spécialités
+              sudaméricaines&nbsp;!
+            </p>
+          </div>
+        </li>
+        <li class="events-week-day">
+          <div class="day-header">
+            <img
+              src="https://images.unsplash.com/photo-1474692295473-66ba4d54e0d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1276&q=80"
+              alt="photo groupe de musique"
+            />
+          </div>
+          <div class="day-body">
+            <h3>Vendredi</h3>
+            <p>
+              ¡Bolo! Venez passer une soirée animée par un groupe de musique de
+              Bordeaux&nbsp;!
+            </p>
+            <p>Pour vous produire au bar, contatez-nous&nbsp;!</p>
+          </div>
+        </li>
+        <li class="events-week-day">
+          <div class="day-header">
+            <img
+              src="https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="photo soirée au Punta Cana Bar"
+            />
+          </div>
+          <div class="day-body">
+            <h3>Samedi</h3>
+            <p>Profitez de notre carte habituelle ;)</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="info">
+        <p><strong>Adresse:</strong> 1 Quai Deschamps, 33100 Bordeaux</p>
+        <p><strong>Horaires:</strong> Du mercredi au samedi/ 18h00 - 2h00</p>
+        <p><strong>Télephone:</strong> 06 58 50 03 32</p>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11316.460299059801!2d-0.5597911!3d44.8395898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x446e62f5b8ba5848!2sPunta%20Cana%20Bar!5e0!3m2!1sfr!2sfr!4v1601466983815!5m2!1sfr!2sfr"
+          width="400"
+          height="300"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+          class="contact_style"
+        ></iframe>
+      </div>
+      <form class="form" id="form">
+        <div class="formName">
+          <label for="name">Nom:</label>
+          <input id="name" class="contact_style" />
+        </div>
+        <div class="formMail">
+          <label for="email">E-mail:</label>
+          <input id="email" class="contact_style" />
+        </div>
+        <div class="formPhone">
+          <label for="phone">Téléphone:</label>
+          <input id="phone" class="contact_style" />
+        </div>
+        <div class="formSelect">
+          <label for="purpose"></label>
+          <select id="purpose" class="contact_style">
+            <option value="">--Please choose an option--</option>
+            <option value="reserve">Réservation</option>
+            <option value="question">Une question?</option>
+            <option value="apply">Postuler</option>
+            <option value="event">Vous souhaitez proposer un événement?</option>
+          </select>
+        </div>
+        <div class="formMsg">
+          <label for="msg"></label>
+          <textarea id="msg" class="contact_style"></textarea>
+        </div>
+        <div class="formButton">
+          <button type="submit" id="button">Envoyer</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-networks">
+        <a
+          href="https://www.tripadvisor.fr/Attraction_Review-g187079-d6608060-Reviews-Punta_Cana_Bar_Tapas-Bordeaux_Gironde_Nouvelle_Aquitaine.html"
+          ><img class="icon" src="./img/icon-facebook.svg"
+        /></a>
+        <a
+          href="https://www.facebook.com/puntacana.bartapas/?rf=265506510133879"
+          ><img class="icon" src="./img/icon-tripadvisor.svg"
+        /></a>
+      </div>
+      <div class="footer-credits">
+        <p>Développé sans influence de l'alcool</p>
+        <p>&copy; Punta Cana Bar 2020</p>
+      </div>
+      <div class="footer-legal">
+        <p>Mentions légales</p>
+        <p>RGPD</p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
