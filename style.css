@@ -344,19 +344,19 @@ margin: calc(var(--spacing)/2) 0 0 0;
 
 /* contact section  */
 
-.contact_style {
-  box-sizing: border-box;
-  width: var(--formWidth);
-  padding: var(--formPadding);
-  margin: var(--formMargin);
-}
-
 .contact {
   box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: var(--sectionMargin);
+}
+
+.contact_style {
+  box-sizing: border-box;
+  width: var(--formWidth);
+  padding: var(--formPadding);
+  margin: var(--formMargin);
 }
 
 .map {
@@ -372,8 +372,9 @@ margin: calc(var(--spacing)/2) 0 0 0;
 }
 
 .info p {
-  text-align: left;
-  padding: 20px;
+  text-align: center;
+  padding: 10px;
+  font-size: var(--title-font-size);
 }
 
 .form {
