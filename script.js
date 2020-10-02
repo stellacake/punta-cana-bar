@@ -30,8 +30,8 @@ form.onsubmit = function (event) {
     "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
   );
 };
-
 // end of contact section
+
 //carousel
 const track = document.querySelector(".carousel_track");
 const slides = Array.from(track.children);
