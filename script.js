@@ -2,7 +2,11 @@
 
 // floating contact button
 
-// let contactButton = document.getElementById("contact-button");
+let contactButton = document.getElementById("contact-button");
+
+const scrollPosition = window.scrollY;
+console.log(contactButton.style.top, scrollPosition);
+
 
 // document.addEventListener(scrollY, fade() { 
 //   if (scrollY >= 400) {
