@@ -12,6 +12,7 @@
   --formMargin: 8px 0;
   --formPadding: 8px 20px;
   --burgerMenu-font-size: 21px;
+  --sectionMargin: 50px;
 }
 
 * {
@@ -200,6 +201,10 @@ h2 {
 
 /* Beginning menu section */
 
+.menu {
+  margin-top: var(--sectionMargin);
+}
+
 .carousel {
   position: relative;
   height: 600px;
@@ -285,6 +290,7 @@ h2 {
   height: auto;
   padding: var(--spacing);
   background-color: var(--secondary-color);
+  margin-top: var(--sectionMargin);
 }
 
 .events-subtitle{
@@ -350,7 +356,7 @@ margin: calc(var(--spacing)/2) 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: var(--sectionMargin);
 }
 
 .map {
@@ -416,6 +422,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
 }
 footer p {
   font-size: 20px;
