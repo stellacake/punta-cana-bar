@@ -1,11 +1,89 @@
 :root {
-    --main-color: blue ;
-    --secondary-color: orange ;
-    --light: #F3F3F3;
-    --dark: #26262b;
-    --text-font: arial ;
-    --title-font: 'Cinzel Decorative', cursive;
-    --text-font-size: 14px;
-    --title-font-size: 18px ;
-    --spacing: 8px;
+  --main-color: blue;
+  --secondary-color: orange;
+  --light: #f3f3f3;
+  --dark: #26262b;
+  --text-font: arial;
+  --title-font: "Cinzel Decorative", cursive;
+  --text-font-size: 14px;
+  --title-font-size: 18px;
+  --spacing: 8px;
+}
+
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel_track-container {
+  background: var(--main-color);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel_track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+
+.carousel_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel_button--left {
+  left: -40px;
+}
+
+.carousel_button--right {
+  right: -40px;
+}
+
+.carousel_nav {
+  background: pink;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing);
+}
+
+.carousel_indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: var(--main-color);
+  margin: var(--spacing);
+  cursor: pointer;
+}
+
+.carousel_indicator.current-slide {
+  background: var(--secondary-color);
+}
+
+.is-hidden {
+  display: none;
 }
