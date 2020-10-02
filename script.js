@@ -1,3 +1,16 @@
+/* burger section */
+
+const burgerMenuElem = document.getElementsByClassName("burgerMenu-elem");
+const checkbox = document.getElementById("checkbox");
+
+for (let i = 0; i < burgerMenuElem.length; i++) {
+  burgerMenuElem[i].addEventListener("click", function() {
+    checkbox.checked = false;
+  });
+}
+/* end burger section */
+
+
 // floating contact button
 
 // let contactButton = document.getElementById("contact-button");
