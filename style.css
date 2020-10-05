@@ -299,7 +299,7 @@ section {
 /* events section */
 .events {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: var(--spacing);
   background-color: var(--light);
   opacity: 80%;
@@ -358,8 +358,13 @@ margin: calc(var(--spacing)/2) 0 0 0;
 
 /* contact section  */
 
+@media screen and (max-width: 768px) {
+  .form {
+    grid-column: 1/3;
+  }
+}
+
 .contact {
-  box-sizing: content-box;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -372,7 +377,7 @@ margin: calc(var(--spacing)/2) 0 0 0;
   box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  max-width: 900px;
 } 
 
 .contact_style {
@@ -396,18 +401,19 @@ margin: calc(var(--spacing)/2) 0 0 0;
 }
 
 .form {
-  box-sizing: border-box;
   font-size: var(--text-font-size);
   font: var(--text-font);
-  grid-column: 1 / 3;
-  padding: 10px
+  padding: 10px;
 }
 
-.form input, select {
+.form input, select, textarea {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
+  border-radius: 10px;
+  opacity: 0.8;
+  background-color: var(--light);
 }
 
 .formButton {
@@ -418,10 +424,12 @@ margin: calc(var(--spacing)/2) 0 0 0;
 #formButton {
   cursor: pointer;
   border: solid var(--main-color);
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 10px;
   padding: var(--formPadding);
   margin: var(--formMargin);
+  background-color: var(--light);
+  opacity: 0.8;
 }
 
 #formButton:hover {
