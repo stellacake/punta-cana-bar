@@ -357,19 +357,32 @@ margin: calc(var(--spacing)/2) 0 0 0;
 
 /* contact section  */
 
+.contact {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: var(--sectionMargin);
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-foot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .contact_style {
   box-sizing: border-box;
   width: var(--formWidth);
   padding: var(--formPadding);
   margin: var(--formMargin);
-}
-
-.contact {
-  box-sizing: content-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: var(--sectionMargin);
 }
 
 .map {
@@ -385,8 +398,9 @@ margin: calc(var(--spacing)/2) 0 0 0;
 }
 
 .info p {
-  text-align: left;
-  padding: 20px;
+  text-align: center;
+  padding: 10px;
+  font-size: var(--title-font-size);
 }
 
 .form {

@@ -185,58 +185,67 @@
     </section>
 
     <section class="contact" id="contact">
-        <h2>Contactez-nous&nbsp;!</h2>
-      <div class="info">
-        <p>Le Punta Cana Bar vous accueille du <strong>mercredi au samedi</strong>, de <strong>18h à 2h</strong></p>
-        <p>1 Quai Deschamps
-          <br>33100 Bordeaux</p>
-        <p>06 58 50 03 32</p>
+      <div class ="contact-body">
+        <h2>Contactez-nous !</h2>
+        <div class="info">
+          <p>On vous accueille du <strong>mercredi au samedi, de 18h à 2h !</strong> Venez nombreux !</p>
+          <h3>1 Quai Deschamps</h3>
+          <h3>33000 Bordeaux</h3>
+          <h3>06 58 50 03 32</h3>
+        </div>
       </div>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11316.460299059801!2d-0.5597911!3d44.8395898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x446e62f5b8ba5848!2sPunta%20Cana%20Bar!5e0!3m2!1sfr!2sfr!4v1601466983815!5m2!1sfr!2sfr"
-          width="400"
-          height="300"
-          frameborder="0"
-          style="border: 0"
-          allowfullscreen=""
-          aria-hidden="false"
-          tabindex="0"
-          class="contact_style"
-        ></iframe>
+      <div class= "contact-foot">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11316.460299059801!2d-0.5597911!3d44.8395898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x446e62f5b8ba5848!2sPunta%20Cana%20Bar!5e0!3m2!1sfr!2sfr!4v1601466983815!5m2!1sfr!2sfr"
+            width="400"
+            height="300"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+            class="contact_style"
+          ></iframe>
+        </div>
+        <form class="form" id="form">
+          <div class="formName">
+            <label for="name"></label>
+            <input id="name" class="contact_style" placeholder="Entrez votre nom"/>
+          </div>
+          <div class="formMail">
+            <label for="email"></label>
+            <input id="email" class="contact_style" placeholder="Entrez votre e-mail" />
+          </div>
+          <div class="formPhone">
+            <label for="phone"></label>
+            <input id="phone" class="contact_style" placeholder="Entrez votre numéro de téléphone"/>
+          </div>
+          <div class="formSelect">
+            <label for="purpose"></label>
+            <select id="purpose" class="contact_style">
+              <option value="">--Choisissez une option--</option>
+              <option value="reserve">Réserver/Privatiser</option>
+              <option value="event">Proposer un événement</option>
+              <option value="question">Poser une question</option>
+              <option value="apply">Postuler</option>
+            </select>
+          </div>
+          <div>
+            <label for="date"></label>
+            <input type="date" id="date" class="contact_style" lang="fr-CA">
+          </div>
+          <div class="formMsg">
+            <label for="msg"></label>
+            <textarea id="msg" class="contact_style"></textarea>
+          </div>
+          <div class="formButton">
+            <button type="submit" id="button">Envoyer</button>
+          </div>
+        </form>
       </div>
-      <form class="form" id="form">
-        <div class="formName">
-          <label for="name"></label>
-          <input id="name" class="contact_style" placeholder="Entrez votre nom"/>
-        </div>
-        <div class="formMail">
-          <label for="email"></label>
-          <input id="email" class="contact_style" placeholder="Entrez votre e-mail" />
-        </div>
-        <div class="formPhone">
-          <label for="phone"></label>
-          <input id="phone" class="contact_style" placeholder="Entrez votre numéro de téléphone"/>
-        </div>
-        <div class="formSelect">
-          <label for="purpose"></label>
-          <select id="purpose" class="contact_style">
-            <option value="">--Choisissez une option--</option>
-            <option value="reserve">Réserver/privatiser</option>
-            <option value="event">Proposer un événement</option>
-            <option value="apply">Postuler</option>
-            <option value="question">Demander des infos</option>
-          </select>
-        </div>
-        <div class="formMsg">
-          <label for="msg"></label>
-          <textarea id="msg" class="contact_style"></textarea>
-        </div>
-        <div class="formButton">
-          <button type="submit" id="button">Envoyer</button>
-        </div>
-      </form>
     </section>
+
 
     <footer>
       <div class="footer-networks">
