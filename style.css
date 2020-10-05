@@ -365,6 +365,7 @@ margin: calc(var(--spacing)/2) 0 0 0;
   align-content: center;
   margin-top: var(--sectionMargin);
   color: var(--light);
+  height: 100vh;
 }
 
  .contact-body {
