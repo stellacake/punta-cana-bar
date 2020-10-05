@@ -404,6 +404,7 @@ margin: calc(var(--spacing)/2) 0 0 0;
   font-size: var(--text-font-size);
   font: var(--text-font);
   padding: 10px;
+  grid-column: 2;
 }
 
 .form input, select, textarea {
