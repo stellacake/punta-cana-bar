@@ -1,8 +1,10 @@
+/* COMMON RULES */
+
 :root {
   --main-color: blue ;
   --secondary-color: orange ;
   --light: #F3F3F3;
-  --dark: #26262b;
+  --dark:  rgb(0, 0, 29);
   --text-font: 'Roboto', sans-serif;
   --title-font: 'Patrick Hand SC', cursive;
   --text-font-size: 14px;
@@ -12,7 +14,6 @@
   --formMargin: 8px 0;
   --formPadding: 8px 20px;
   --burgerMenu-font-size: 21px;
-  --sectionMargin: 50px;
 }
 
 * {
@@ -23,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -30,29 +32,36 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment:fixed;
-  color: var(--dark);
-  color: var(--text-font);
+  color: var(--light);
   text-align: center;
 }
 
 h1 {
   font-family: var(--title-font);
   font-size: calc(var(--title-font-size)*1.5);
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
   font-family: var(--title-font);
-  font-size: calc(var(--title-font-size) * 2);
+  font-size: calc(var(--title-font-size) * 3);
   text-align: center;
+}
+
+h3{
+  font-size: var(--title-font-size);
 }
 
 section {
   margin: 0;
-  padding : 0;
+  height: 100vh;
+  width: 100%;
+  padding-top: calc(var(--spacing)*4);
+  padding-bottom: calc(var(--spacing)*4);
 }
-/* beginning BURGER section */
+/* end of COMMON RULES */
 
+/* beginning of BURGER MENU */
 #burgerLogo {
   width: 50px;
   height: 50px;
@@ -74,7 +83,7 @@ section {
 #burgerToggle a
 {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--light);
   transition: color 0.3s ease;
 }
 
@@ -91,7 +100,7 @@ section {
   position: fixed;
   top: 15px;
   left: 15px;
-  
+
   cursor: pointer;
   
   opacity: 0;
@@ -107,14 +116,18 @@ section {
   padding: 50px;
   padding-top: 125px;
   
-  background: var(--main-color);
+  background-color: rgb(0, 0, 29);
+  opacity: 70%;
   list-style-type: none;
-  opacity: 0.9;
   
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.burgerMenu-elem {
+  text-align: left;
 }
 
 
@@ -123,9 +136,9 @@ section {
   transform: none;
 }
 
-/* end BURGER section */
+/* end of BURGER MENU */
 
-/* floating contact button */
+/* beginning of FLOATING CONTACT BUTTON */
 .floating-contact-button {
   z-index: 1;
   position: fixed;
@@ -134,6 +147,7 @@ section {
   bottom: 0px;
   background-color: var(--main-color);
   filter: drop-shadow(0 0 5px black);
+  border-color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,19 +157,23 @@ section {
 
 .floating-contact-button:hover {
   cursor: pointer;
-  background-color:rgb(50, 50, 251);
+  background-color: var(--light);
+  color: var(--main-color);
+}
+
+button:hover {
+  background-color: var(--light);
+  color: var(--main-color);
 }
 
 .floating-contact-button-fade-out {
   display: none;
 }
 
-/* end of floating contact button */
+/* end of FLOATING CONTACT BUTTON */
 
 /* beginning of HOME section */
 .home {
-  margin-bottom: var(--spacing);
-  height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,12 +190,10 @@ section {
 
 /* beginning of ABOUT section */
 .about {
-    background-color: var(--light);
-    opacity: 80%;
+    background-color: rgb(0, 0, 29);
+    opacity: 90%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5%;
-    height: 100vh;
 }
 
 .about-box {
@@ -190,6 +206,10 @@ section {
 
 .about h2 {
   margin-bottom: var(--spacing);
+}
+
+.about p {
+  padding: var(--spacing);
 }
 
 .img-cocktails-counter {
@@ -210,12 +230,7 @@ section {
 }
 /* end of ABOUT section */
 
-/* Beginning menu section */
-
-.menu {
-  margin-top: var(--sectionMargin);
-  height: 100vh;
-}
+/* beginning MENU section */
 
 .carousel {
   position: relative;
@@ -295,19 +310,21 @@ section {
 .is-hidden {
   display: none;
 }
+/* end of MENU section */
 
-/* events section */
+/* beginning of EVENTS section */
 .events {
-  width: 100%;
-  height: 100vh;
   padding: var(--spacing);
-  background-color: var(--light);
-  opacity: 80%;
-  margin-top: var(--sectionMargin);
+  background-color: rgb(0, 0, 29);
+  opacity: 90%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.events-subtitle{
+.events-subtitle > p {
     text-align: center;
+    padding: var(--spacing);
 }
 
 .events ul {
@@ -350,25 +367,30 @@ img:hover {
     align-items: center;
     font-size: var(--text-font-size);
 }
+
+.day-body > h3 {
+  color: var(--dark);
+}
 .day-body > p {
 margin: calc(var(--spacing)/2) 0 0 0;
+color: var(--dark);
 }
-/* end of events section */
+/* end of EVENTS section */
 
-/* contact section  */
+/* beginning of CONTACT section  */
 
 .contact {
   box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  margin-top: var(--sectionMargin);
+  justify-content: space-around;
 }
 
 .contact-body {
   display: flex;
   flex-direction: column;
+  
 }
 
 .contact-foot {
@@ -386,7 +408,6 @@ margin: calc(var(--spacing)/2) 0 0 0;
 }
 
 .map {
-  background-color: var(--secondary-color);
   box-sizing: border-box;
   margin-top: 20px;
 }
@@ -394,7 +415,6 @@ margin: calc(var(--spacing)/2) 0 0 0;
 .info {
   box-sizing: border-box;
   display: block;
-  background-color: var(--secondary-color);
 }
 
 .info p {
@@ -409,7 +429,6 @@ margin: calc(var(--spacing)/2) 0 0 0;
   box-sizing: border-box;
   font-size: var(--text-font-size);
   font: var(--text-font);
-  background-color: var(--secondary-color);
   padding: 10px;
 }
 
@@ -427,23 +446,26 @@ margin: calc(var(--spacing)/2) 0 0 0;
 
 button {
   cursor: pointer;
-  border: solid var(--main-color);
+  background-color: var(--main-color);
+  color: var(--light);
   border-radius: 25px;
-  padding: 10px;
+  border-color: var(--main-color);
   padding: var(--formPadding);
   margin: var(--formMargin);
 }
 
 button:hover {
-  border-color: var(--secondary-color);
+  background-color: var(--light);
+  color: var(--main-color);
 }
-/* end of contact section */
+/* end of CONTACT section */
 
-/* footer */
+/* beginning of FOOTER */
 footer {
   width: 100%;
   height: 80px;
-  background-color: var(--dark);
+  background-color: rgb(0, 0, 29);
+  opacity: 90%;
   line-height: 25px;
   margin: 0px;
   display: flex;
@@ -452,9 +474,19 @@ footer {
   margin-bottom: 50px;
 }
 footer p {
-  font-size: 20px;
+  font-size: var(--text-font-size);
   margin-top: 0px;
   color: var(--light);
+}
+.footer-networks {
+  margin-left: calc(var(--spacing)*2);
+}
+.footer-networks a {
+  padding-right: var(--spacing);
+}
+.footer-legal{
+  margin-right: calc(var(--spacing)*2);
+  text-align: right;
 }
 
 .icon {
@@ -462,4 +494,4 @@ footer p {
   height : 30px;
   fill: var(--light);
 }
-/* end of footer */
+/* end of FOOTER */
