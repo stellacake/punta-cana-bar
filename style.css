@@ -299,7 +299,7 @@ section {
 /* events section */
 .events {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: var(--spacing);
   background-color: var(--light);
   opacity: 80%;
