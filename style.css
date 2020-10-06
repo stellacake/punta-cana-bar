@@ -175,16 +175,22 @@ button:hover {
 /* beginning of HOME section */
 .home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.logo-container {
-  text-align: center;
+.logo-img {
+  width: 300px;
+  margin-bottom: calc(var(--spacing) * 5);
 }
 
-.logo-img {
-  width: 250px;
+.arrow-down {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(45deg);
 }
 /* end of HOME section */
 
