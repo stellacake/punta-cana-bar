@@ -5,7 +5,7 @@ const checkbox = document.getElementById("checkbox");
 
 //burgerMenuElem.map((e, i) => e.addEventListener("click", () => checkbox.checked = false))
 for (let i = 0; i < burgerMenuElem.length; i++) {
-  burgerMenuElem[i].addEventListener("click", function() {
+  burgerMenuElem[i].addEventListener("click", function () {
     checkbox.checked = false;
   });
 }
@@ -14,19 +14,19 @@ for (let i = 0; i < burgerMenuElem.length; i++) {
 
 // floating contact button
 
-let contactButton = document.getElementById("contact-button");
+$("body").append('<class="floating-contact-button" title="contact-button">');
 
-const scrollPosition = window.scrollY;
-console.log(contactButton.style.top, scrollPosition);
-
-
-// document.addEventListener(scrollY, fade() {
-//   if (scrollY >= 400) {
-//     contactButton.classList.add("floating-contact-button-fade-out");
-//   } else {
-//     contactButton.classList.remove("floating-contact-button-fade-out");
-//   }
-// });
+if (window.matchMedia("(min-width: 768px)").matches) {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 730) $(".floating-contact-button").fadeOut(600);
+    else $(".floating-contact-button").fadeIn(600);
+  });
+} else {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 730) $(".floating-contact-button").fadeOut(600);
+    else $(".floating-contact-button").fadeIn(600);
+  });
+}
 
 // end of floating contact button
 
