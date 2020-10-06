@@ -142,17 +142,17 @@ section {
 .floating-contact-button {
   z-index: 1;
   position: fixed;
+  bottom: 0px;
   width: 100vw;
   height: 50px;
-  bottom: 0px;
+  margin: auto;
   background-color: var(--main-color);
   filter: drop-shadow(0 0 5px black);
   border-color: var(--main-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 50px;
   font-size: 20px;
   color: var(--light);
+  display: none;
 }
 
 .floating-contact-button:hover {
@@ -164,10 +164,6 @@ section {
 button:hover {
   background-color: var(--light);
   color: var(--main-color);
-}
-
-.floating-contact-button-fade-out {
-  display: none;
 }
 
 /* end of FLOATING CONTACT BUTTON */
@@ -512,7 +508,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
 }
 footer p {
   font-size: var(--text-font-size);
