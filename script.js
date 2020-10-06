@@ -23,7 +23,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   });
 } else {
   $(window).scroll(function () {
-    if ($(window).scrollTop() + $(window).height() > $(document).height() - 730) $(".floating-contact-button").fadeOut(600);
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 850) $(".floating-contact-button").fadeOut(600);
     else $(".floating-contact-button").fadeIn(600);
   });
 }
