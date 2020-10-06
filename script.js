@@ -3,7 +3,7 @@
 const burgerMenuElem = document.getElementsByClassName("burgerMenu-elem");
 const checkbox = document.getElementById("checkbox");
 
-//burgerMenuElem.map((e, i) => i.addEventListener("click", () => checkbox.checked = false))
+//burgerMenuElem.map((e, i) => e.addEventListener("click", () => checkbox.checked = false))
 for (let i = 0; i < burgerMenuElem.length; i++) {
   burgerMenuElem[i].addEventListener("click", function() {
     checkbox.checked = false;

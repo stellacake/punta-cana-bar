@@ -22,6 +22,11 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
@@ -50,6 +55,7 @@ h2 {
 
 h3{
   font-size: var(--title-font-size);
+  margin: 5px;
 }
 
 section {
@@ -387,29 +393,6 @@ color: var(--dark);
 /* end of EVENTS section */
 
 /* beginning of CONTACT section  */
-
-@media screen and (max-width: 768px) {
-  .form {
-    grid-column: 1/3;
-    grid-row: 2/3;
-  }
-
-  .map {
-    grid-row: 1/2;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .form {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
-
-  .map {
-    grid-row: 1/3;
-  }
-}
-
 .contact {
   display: grid;
   justify-content: center;
@@ -536,3 +519,29 @@ footer p {
   fill: var(--light);
 }
 /* end of FOOTER */
+
+/* MEDIA */
+/*media contact*/
+@media screen and (max-width: 768px) {
+  .form {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .map {
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .map {
+    grid-row: 1/3;
+  }
+}
+/* END media contact */
+/* END MEDIA */
