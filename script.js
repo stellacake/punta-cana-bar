@@ -39,7 +39,6 @@ polaroids.forEach((item) => {
 // end of events section
 
 // contact section
-
 const form = document.getElementById("form");
 form.onsubmit = function (event) {
   event.preventDefault();
