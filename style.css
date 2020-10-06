@@ -188,15 +188,25 @@ button:hover {
 
 .logo-img {
   width: 300px;
-  margin-bottom: calc(var(--spacing) * 12);
 }
 
 .arrow-down {
-  border: solid rgb(255, 255, 255);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 5px;
-  transform: rotate(45deg);
+  width: 30px;
+  animation-name: verticalSliding;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes verticalSliding {
+  0% {
+    transform: translate(0px, 30px);
+  }
+  50% {
+    transform: translate(0px, 80px);
+  }
+  100% {
+    transform: translate(0px, 30px);
+  }
 }
 /* end of HOME section */
 
@@ -227,7 +237,7 @@ button:hover {
 .img-cocktails-counter {
   height: 200px;
   transform: rotate(-4deg);
-  margin: -5rem 0 calc(var(--spacing) * 2) 0;
+  margin: -6rem 0 calc(var(--spacing) * 2) 0;
 }
 
 .img-toast-box {
@@ -529,6 +539,17 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+  /* start of ABOUT section */
+  .about-p {
+    margin-bottom: calc(var(--spacing)*2);
+  }
+
+  .img-toast-box {
+    width: 85%;
+    margin: 0 auto;
+  }
+  /* end of ABOUT section */
+
   /*media contact*/
   .form {
     grid-row: 2/3;
@@ -542,6 +563,36 @@ footer p {
 }
 
 @media screen and (min-width: 1200px) {
+  /* start of HOME section */
+  .logo-img {
+    width: 500px;
+    margin-bottom: 0;
+  }
+
+  .arrow-down {
+    width: 50px;
+  }
+  
+  @keyframes verticalSliding {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(0px, 30px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  /* end of HOME section */
+
+  /* start of ABOUT section */
+  .img-toast-box {
+    height: 250px;
+    width: 70%;
+  }
+  /* end of ABOUT section */
+
   .events {
     height: 100vh;
   }
