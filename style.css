@@ -446,6 +446,7 @@ color: var(--dark);
 
 .info p {
   font-size: var(--title-font-size);
+  padding: 10px;
 }
 
 .form {
@@ -456,11 +457,11 @@ color: var(--dark);
 
 .form input, select, textarea {
   border: none;
-  border-bottom: solid var(--secondary-color);
-  border-left: solid var(--secondary-color);
-  border-radius: 10px;
+  border-bottom: 1px solid var(--light);
+  border-left: 1px solid var(--light);
+  background-color: var(--dark);
+  color: var(--light);
   opacity: 0.8;
-  background-color: var(--light);
 }
 
 textarea {
@@ -483,17 +484,20 @@ textarea {
 
 #formButton {
   cursor: pointer;
-  border: solid var(--main-color);
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 10px;
   padding: var(--formPadding);
   margin: var(--formMargin);
-  background-color: var(--light);
+  background-color: var(--dark);
   opacity: 0.8;
+  color: var(--light);
+  border: 1px solid var(--light)
 }
 
 #formButton:hover {
-  border-color: var(--secondary-color);
+  border: 1px solid var(--dark);
+  background-color: var(--light);
+  color: var(--dark);
 }
 /* end of CONTACT section */
 
