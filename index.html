@@ -10,126 +10,107 @@
     <title>Bienvenue au Punta Cana Bar</title>
   </head>
 
-  <body>
+<body>
 
-    <header>
-      <nav id="burgerToggle">
-        <input type="checkbox" id ="checkbox"/>
-        <img
-          src="./img/burger_icon.svg.png"
-          alt="menu icon"
-          id="burgerLogo"
-        />
-        <ul id="burgerMenu">
-          <h1>Punta Cana Bar</h1>
-          <a href="#home">
-            <li class ="burgerMenu-elem">Bienvenue</li>
-          </a>
-          <a href="#about">
-            <li class ="burgerMenu-elem">Le bar</li>
-          </a>
-          <a href="#menu">
-            <lli class ="burgerMenu-elem">La carte</li>
-          </a>
-          <a href="#events">
-            <li class ="burgerMenu-elem">Nos événements</li>
-          </a>
-          <a href="#contact">
-            <li class ="burgerMenu-elem">Contact</li>
-          </a>
+  <header>
+    <nav id="burgerToggle">
+      <input type="checkbox" id="checkbox" />
+      <img src="./img/burger_icon.svg.png" alt="menu icon" id="burgerLogo" />
+      <ul id="burgerMenu">
+
+        <a href="#home">
+          <li class="burgerMenu-elem">
+            <h1>Punta Cana Bar</h1>
+          </li>
+        </a>
+        <a href="#about">
+          <li class="burgerMenu-elem">Le bar</li>
+        </a>
+        <a href="#menu">
+          <li class="burgerMenu-elem">La carte</li>
+        </a>
+        <a href="#events">
+          <li class="burgerMenu-elem">Les événements</li>
+        </a>
+        <a href="#contact">
+          <li class="burgerMenu-elem">Nous contacter</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <a href="#contact">
+    <div class="floating-contact-button" id="contact-button">
+      <p>Réservez !</p>
+    </div>
+  </a>
+
+  <section class="home" id="home">
+    <div class="logo-container">
+      <img src="./img/logo-tmp.png" class="logo-img" alt="verre à cocktail agité derrière le nom Punta Cana Bar" />
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-box">
+      <img
+        src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/p960x960/60085929_2316955428576913_4503917751303143424_o.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=-jx3IjPHOu8AX9MvdhQ&_nc_ht=scontent-cdg2-1.xx&tp=6&oh=882b6ad5ce0717c38d14241a47988889&oe=5F988637"
+        alt="cocktails and bottles on a bar counter" class="img-cocktails-counter" />
+      <h2>Le bar</h2>
+      <p>Le Punta Cana Bar, c'est VOTRE adresse latino à Bordeaux&nbsp;!</p>
+      <p>Tapas, cocktails, bières...</p>
+      <p>Toute l'année, nous vous proposons des spécialités latines et dominicaines ;)</p>
+      <p>Découvrez aussi nos animations hebdomadaires&nbsp;!</p>
+      <div class="img-toast-box"></div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <h2>La carte</h2>
+    <div class="carousel">
+      <button class="carousel_button carousel_button--left"></button>
+      <div class="carousel_track-container">
+        <ul class="carousel_track">
+          <li class="carousel_slide current-slide">
+            <img class="carousel_image" src="https://source.unsplash.com/random" alt="" />
+          </li>
+          <li class="carousel_slide">
+            <img class="carousel_image" src="https://picsum.photos/200/300" alt="" />
+          </li>
+          <li class="carousel_slide">
+            <img class="carousel_image" src="http://placeimg.com/640/360/any" alt="" />
+          </li>
         </ul>
-      </nav>
-    </header>
-
-    <a href="#contact">
-      <div class="floating-contact-button" id ="contact-button">
-        <p>Réservez !</p>
       </div>
-    </a>
-
-    <section class="home" id ="home">
-      <div class="logo-container">
-        <img
-          src="./img/logo-tmp.png"
-          class="logo-img"
-          alt="verre à cocktail agité derrière le nom Punta Cana Bar"
-        />
+      <button class="carousel_button carousel_button--right">></button>
+      <div class="carousel_nav">
+        <button class="carousel_indicator current-slide"></button>
+        <button class="carousel_indicator"></button>
+        <button class="carousel_indicator"></button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="about" id ="about">
-      <div class="about-box">
-        <img
-          src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/p960x960/60085929_2316955428576913_4503917751303143424_o.jpg?_nc_cat=104&_nc_sid=110474&_nc_ohc=-jx3IjPHOu8AX9MvdhQ&_nc_ht=scontent-cdg2-1.xx&tp=6&oh=882b6ad5ce0717c38d14241a47988889&oe=5F988637"
-          alt="cocktails and bottles on a bar counter"
-          class="img-cocktails-counter"
-        />
-        <h2>À propos</h2>
-        <p>Venez découvrir notre bar latino et toutes ses animations</p>
-          <p>Nous proposons des spécialités de la République Dominicaine et des animations hebdomadaires toute l'année&nbsp;!</p>
-        <div class="img-toast-box"></div>
-      </div>
-    </section>
-
-    <section class="menu" id ="menu">
-      <h2>Notre carte</h2>
-      <div class="carousel">
-        <button class="carousel_button carousel_button--left"></button>
-        <div class="carousel_track-container">
-          <ul class="carousel_track">
-            <li class="carousel_slide current-slide">
-              <img
-                class="carousel_image"
-                src="https://source.unsplash.com/random"
-                alt=""
-              />
-            </li>
-            <li class="carousel_slide">
-              <img
-                class="carousel_image"
-                src="https://picsum.photos/200/300"
-                alt=""
-              />
-            </li>
-            <li class="carousel_slide">
-              <img
-                class="carousel_image"
-                src="http://placeimg.com/640/360/any"
-                alt=""
-              />
-            </li>
-          </ul>
-        </div>
-        <button class="carousel_button carousel_button--right">></button>
-        <div class="carousel_nav">
-          <button class="carousel_indicator current-slide"></button>
-          <button class="carousel_indicator"></button>
-          <button class="carousel_indicator"></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="events" id="events">
-      <h2>Événements</h2>
-      <p class="events-subtitle">
-        Ce qu'on aime au Punta Cana Bar, c'est vous voir vous amuser&nbsp;!
-      </p>
-      <p class="events-subtitle">
-        Du coup, on fait tout pour vous tenir occupés ;)
-      </p>
-      <p class="events-subtitle">
-        Découvrez donc nos rendez-vous hebdomadaires...
-      </p>
+  <section class="events" id="events">
+    <div>
+      <h2>Les événements</h2>
+    </div>
+    <div class="events-subtitle">
+      <p>Ce qu'on aime au Punta Cana Bar, c'est vous voir vous amuser&nbsp;!</p>
+      <p>Du coup, on fait tout pour vous tenir occupés ;)</p>
+      <p>Découvrez donc nos rendez-vous hebdomadaires...</p>
+    </div>
+    <div class="photo-gallery">
       <ul class="events-week">
         <li class="events-week-day">
           <div class="day-header">
-            <img
-              src="https://classpass-res.cloudinary.com/image/upload/f_auto,q_auto/ldra8xdrnlkmqbjhjamh.png"
-              alt="photo soirée dansante"
-            />
+            <img src="https://classpass-res.cloudinary.com/image/upload/f_auto,q_auto/ldra8xdrnlkmqbjhjamh.png"
+              alt="photo soirée dansante" />
           </div>
           <div class="day-body">
+            <p>
             <h3>Mercredi</h3>
+            </p>
             <p>
               On se déhanche&nbsp;! Profitez de la présence de Cédric Catala,
               notre prof officiel, pour parfaire vos pas de danse&nbsp;!
@@ -141,11 +122,12 @@
           <div class="day-header">
             <img
               src="https://images.unsplash.com/photo-1543282687-75e5cb83c585?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80"
-              alt="photo DJ"
-            />
+              alt="photo DJ" />
           </div>
           <div class="day-body">
+            <p>
             <h3>Jeudi</h3>
+            </p>
             <p>
               ¡Fiesta latina! Avec DJ el Nybra aux plantines, (re)dégustez
               emmpanadas, papas rellenas et plein d'autres spécialités
@@ -157,11 +139,12 @@
           <div class="day-header">
             <img
               src="https://images.unsplash.com/photo-1474692295473-66ba4d54e0d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1276&q=80"
-              alt="photo groupe de musique"
-            />
+              alt="photo groupe de musique" />
           </div>
           <div class="day-body">
+            <p>
             <h3>Vendredi</h3>
+            </p>
             <p>
               ¡Bolo! Venez passer une soirée animée par un groupe de musique de
               Bordeaux&nbsp;!
@@ -173,16 +156,18 @@
           <div class="day-header">
             <img
               src="https://images.pexels.com/photos/1269025/pexels-photo-1269025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="photo soirée au Punta Cana Bar"
-            />
+              alt="photo soirée au Punta Cana Bar" />
           </div>
           <div class="day-body">
+            <p>
             <h3>Samedi</h3>
+            </p>
             <p>Profitez de notre carte habituelle ;)</p>
           </div>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
     <section class="contact" id="contact">
         <h2>Contactez-nous !</h2>
@@ -245,28 +230,25 @@
     </section>
 
 
-    <footer>
-      <div class="footer-networks">
-        <a
-          href="https://www.tripadvisor.fr/Attraction_Review-g187079-d6608060-Reviews-Punta_Cana_Bar_Tapas-Bordeaux_Gironde_Nouvelle_Aquitaine.html"
-          ><img class="icon" src="./img/icon-facebook.svg"
-        /></a>
-        <a
-          href="https://www.facebook.com/puntacana.bartapas/?rf=265506510133879"
-          ><img class="icon" src="./img/icon-tripadvisor.svg"
-        /></a>
-      </div>
-      <div class="footer-credits">
-        <p>Développé sans influence de l'alcool</p>
-        <p>&copy; Punta Cana Bar 2020</p>
-      </div>
-      <div class="footer-legal">
-        <p>Mentions légales</p>
-        <p>RGPD</p>
-      </div>
-    </footer>
+  <footer>
+    <div class="footer-networks">
+      <a
+        href="https://www.tripadvisor.fr/Attraction_Review-g187079-d6608060-Reviews-Punta_Cana_Bar_Tapas-Bordeaux_Gironde_Nouvelle_Aquitaine.html"><img
+          class="icon" src="./img/icon-facebook.svg" /></a>
+      <a href="https://www.facebook.com/puntacana.bartapas/?rf=265506510133879"><img class="icon"
+          src="./img/icon-tripadvisor.svg" /></a>
+    </div>
+    <div class="footer-credits">
+      <p>Développé sans influence de l'alcool</p>
+      <p>&copy; Punta Cana Bar 2020</p>
+    </div>
+    <div class="footer-legal">
+      <p>Mentions légales</p>
+      <p>RGPD</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 
 </html>
