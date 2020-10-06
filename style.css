@@ -299,7 +299,7 @@ section {
 /* events section */
 .events {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: var(--spacing);
   background-color: var(--light);
   opacity: 80%;
@@ -361,6 +361,22 @@ margin: calc(var(--spacing)/2) 0 0 0;
 @media screen and (max-width: 768px) {
   .form {
     grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .map {
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .map {
+    grid-row: 1/3;
   }
 }
 
@@ -377,7 +393,9 @@ margin: calc(var(--spacing)/2) 0 0 0;
   box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   max-width: 900px;
+  height: 100%;
 } 
 
 .contact_style {
@@ -404,17 +422,23 @@ margin: calc(var(--spacing)/2) 0 0 0;
   font-size: var(--text-font-size);
   font: var(--text-font);
   padding: 10px;
-  grid-column: 2;
 }
 
 .form input, select, textarea {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
+  border: none;
+  border-bottom: solid var(--secondary-color);
+  border-left: solid var(--secondary-color);
   border-radius: 10px;
   opacity: 0.8;
   background-color: var(--light);
+}
+
+#date {
+  display: none;
+}
+
+#msg {
+  display: none;
 }
 
 .formButton {

@@ -40,6 +40,27 @@ polaroids.forEach((item) => {
 // end of events section
 
 // contact section
+
+const selector = document.getElementById("purpose");
+const date = document.getElementById("date");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const message = document.getElementById("msg");
+
+selector.addEventListener("change", function() {
+  if (selector.value === "reserve" || selector.value === "event") {
+    message.style.display = "block";
+    date.style.display = "block";
+  } else {
+    message.style.display = "none";
+    date.style.display ="none"
+  }
+  if (selector.value === "question") {
+    message.style.display = "block"
+  }
+});
+
 const form = document.getElementById("form");
 form.onsubmit = function (event) {
   event.preventDefault();
