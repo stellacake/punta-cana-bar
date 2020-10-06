@@ -182,7 +182,7 @@ button:hover {
 
 .logo-img {
   width: 300px;
-  margin-bottom: calc(var(--spacing) * 5);
+  margin-bottom: calc(var(--spacing) * 12);
 }
 
 .arrow-down {
