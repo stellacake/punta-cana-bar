@@ -450,18 +450,11 @@ color: var(--dark);
 textarea {
   resize: none;
   height: 70px;
-}
-
-#date {
   display: none;
 }
 
-#msg {
+#date-container {
   display: none;
-}
-
-.formButton {
-  display: block;
   justify-content: center;
 }
 

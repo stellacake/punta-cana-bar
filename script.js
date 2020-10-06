@@ -47,26 +47,62 @@ const name = document.getElementById("name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const message = document.getElementById("msg");
+const form = document.getElementById("form");
+const time = document.getElementById("time");
+const people = document.getElementById("people");
+const timed = document.getElementById("date-container");
 
 selector.addEventListener("change", function() {
-  if (selector.value === "reserve" || selector.value === "event") {
+  if (selector.value === "reserve") {
     message.style.display = "block";
+    timed.style.display = "flex";
     date.style.display = "block";
-  } else {
-    message.style.display = "none";
-    date.style.display ="none"
+    people.style.display = "block";
+    time.style.display = "block";
+  }
+  if (selector.value === "event") {
+    message.style.display = "block";
+    timed.style.display = "flex";
+    date.style.display = "block";
+    people.style.display = "none";
+    time.style.display = "none";
   }
   if (selector.value === "question") {
-    message.style.display = "block"
+    message.style.display = "block";
+    date.style.display = "none";
+    timed.style.display = "none";
+  }
+  if (selector.value === "apply") {
+    message.style.display = "block";
+    date.style.display = "none";
+    timed.style.display = "none";
+  }
+  if (selector.value === "") {
+    message.style.display = "none";
+    timed.style.display = "none";
+    date.style.display = "none";
+    people.style.display = "none";
+    time.style.display = "none";
   }
 });
 
-const form = document.getElementById("form");
 form.onsubmit = function (event) {
   event.preventDefault();
-  alert(
-    "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
-  );
+  if (selector.value === "reserve") {
+    alert(
+      `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+    )
+  } else if(selector.value === "event") {
+    alert(`Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+    )
+  } else if(selector.value === "apply") {
+    alert(
+      `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+    )
+  } else {
+    alert(
+      "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
+    )}
 };
 // end of contact section
 

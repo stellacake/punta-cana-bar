@@ -199,7 +199,7 @@
           <form class="form" id="form">
             <div class="formSelect">
               <label for="purpose"></label>
-              <select id="purpose" class="contact_style">
+              <select id="purpose" class="contact_style" required>
                 <option value="">Que pouvons-nous faire pour vous ?</option>
                 <option value="reserve">Réserver/Privatiser</option>
                 <option value="event">Proposer un événement</option>
@@ -219,9 +219,11 @@
               <label for="phone"></label>
               <input id="phone" class="contact_style" placeholder="Entrez votre numéro de téléphone" required/>
             </div>
-            <div>
               <label for="date"></label>
-              <input type="date" id="date" class="contact_style" lang="fr-CA" required>
+              <div id="date-container">
+                <input type="date" id="date" class="contact_style" lang="fr-CA" required>
+                <input type="time" id="time" class="contact_style" required>
+                <input type="number" id="people" class="contact_style" min="0" step="1"/>
             </div>
             <div class="formMsg">
               <label for="msg"></label>
