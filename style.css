@@ -1,21 +1,12 @@
 /* COMMON RULES */
 
 :root {
-<<<<<<< Updated upstream
-  --main-color: blue;
-  --secondary-color: orange;
-  --light: #f3f3f3;
-  --dark: rgb(0, 0, 29);
-  --text-font: "Roboto", sans-serif;
-  --title-font: "Patrick Hand SC", cursive;
-=======
   --main-color: #3279FF ;
   --secondary-color: orange ;
   --light: #F3F3F3;
   --dark:  rgb(0, 0, 29);
   --text-font: 'Roboto', sans-serif;
   --title-font: 'Patrick Hand SC', cursive;
->>>>>>> Stashed changes
   --text-font-size: 14px;
   --title-font-size: 18px;
   --spacing: 8px;
