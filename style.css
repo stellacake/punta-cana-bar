@@ -377,10 +377,6 @@ button:hover {
     width: 100%;
     display: block;
     object-fit: cover;
-    filter: grayscale(100%);
-}
-img:hover {
-    filter: grayscale(0%);
 }
 
 .day-body {
@@ -632,16 +628,32 @@ footer p {
   }
   /* end of ABOUT section */
 
-  .events {
-    height: 100vh;
+  /* start media events */
+  .day-header img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
   }
+  img:hover {
+    filter: grayscale(0%);
+  }
+  /* end media events */
 
   /*media contact*/
   .contact {
     height: 100vh;
   }
-
   /* END media contact */
+
 }
-/* END media contact */
+
+/* SPECIAL DESKTOP SCREEN FOR EVENT SECTION */
+@media screen and (min-width: 1550px) {
+  .events {
+    height: 100vh;
+  }
+/* END SPECIAL DESKTOP SCREEN FOR EVENT SECTION */
+
 /* END MEDIA */
