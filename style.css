@@ -522,7 +522,9 @@ footer p {
 }
 /* end of FOOTER */
 
-/*______________________________________________________________________SCREENS___ */
+/*________________________________________________________________________________SCREENS___ */
+
+/*______________________________________________________________________MOBILE___ */
 
 @media screen and (max-width: 768px) {
   /*media contact*/
@@ -544,6 +546,7 @@ footer p {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 0;
   }
   .footer-networks {
     order: 1;
@@ -556,7 +559,8 @@ footer p {
   }
 
   .footer-networks {
-    margin-left: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .footer-networks a {
@@ -572,7 +576,7 @@ footer p {
 
   /* end media footer */
 }
-
+/*______________________________________________________________________TABLET___ */
 @media screen and (min-width: 768px) {
   /* start of ABOUT section */
   .about-p {
@@ -596,7 +600,7 @@ footer p {
   }
   /* END media contact */
 }
-
+/*______________________________________________________________________DESKTOP___ */
 @media screen and (min-width: 1200px) {
   /* start of HOME section */
   .logo-img {
