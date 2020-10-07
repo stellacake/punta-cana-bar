@@ -645,6 +645,10 @@ footer p {
   .contact {
     height: 100vh;
   }
+
+  .map {
+    max-height: 500px;
+  }
   /* END media contact */
 }
 
