@@ -451,6 +451,10 @@ textarea {
   display: none;
 }
 
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 #date-container {
   display: none;
   justify-content: center;
