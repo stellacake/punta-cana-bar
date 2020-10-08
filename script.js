@@ -60,7 +60,7 @@ selector.addEventListener("change", function() {
     people.style.display = "block";
     time.style.display = "block";
   }
-  if (selector.value === "event") {
+  if (selector.value === "events") {
     message.style.display = "block";
     timed.style.display = "flex";
     date.style.display = "block";
@@ -91,10 +91,6 @@ selector.addEventListener("change", function() {
 const formButton = document.getElementById('formButton');
 const overlay = document.getElementById('overlay');
 const btnClose = document.getElementById('btnClose');
-// const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-// const events = `Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-// const apply = `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-// const basic = "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !";
 const popupR = document.getElementById("popup-text_reserve");
 const popupE = document.getElementById("popup-text_events");
 const popupQ = document.getElementById("popup-text_question");
