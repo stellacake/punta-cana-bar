@@ -215,11 +215,9 @@ button:hover {
 }
 
 .about-box {
-  text-align: center;
-  background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
-  padding: calc(var(--spacing) * 2);
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+    text-align: center;
+    background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
+    padding: calc(var(--spacing) * 2);
 }
 
 .about h2 {
@@ -230,12 +228,6 @@ button:hover {
   padding: var(--spacing);
 }
 
-.img-cocktails-counter {
-  height: 200px;
-  transform: rotate(-4deg);
-  margin: -6rem 0 calc(var(--spacing) * 2) 0;
-}
-
 .img-toast-box {
   height: 200px;
   width: 100%;
@@ -243,8 +235,8 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
-  margin-top: calc(var(--spacing) * 2);
-  margin-bottom: -5rem;
+  margin-top: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 5);
 }
 /* end of ABOUT section */
 
@@ -577,7 +569,7 @@ footer p {
 @media screen and (min-width: 768px) {
   /* start of ABOUT section */
   .about-p {
-    margin-bottom: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 3);
   }
 
   .img-toast-box {
@@ -626,11 +618,17 @@ footer p {
   /* start of ABOUT section */
   .about {
     height: 100vh;
+    padding-top: var(--spacing);
+  }
+
+  .about-p {
+    margin-bottom: calc(var(--spacing) * 3);
   }
   
   .img-toast-box {
     height: 250px;
-    width: 70%;
+    width: 80%;
+    margin-top: calc(var(--spacing) * 3);
   }
   /* end of ABOUT section */
 
