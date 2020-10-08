@@ -214,28 +214,12 @@ button:hover {
   background-size: cover;
 }
 
-.carte-detaillee-box {
+.about-box {
   text-align: center;
   background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
   padding: calc(var(--spacing) * 2);
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.carte-detaillee {
-  background-color: rgb(0, 0, 29);
-  opacity: 90%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-.about-box {
-    text-align: center;
-    background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
-    padding: calc(var(--spacing) * 2);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .about h2 {
@@ -246,6 +230,12 @@ button:hover {
   padding: var(--spacing);
 }
 
+.img-cocktails-counter {
+  height: 200px;
+  transform: rotate(-4deg);
+  margin: -6rem 0 calc(var(--spacing) * 2) 0;
+}
+
 .img-toast-box {
   height: 200px;
   width: 100%;
@@ -253,8 +243,8 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
-  margin-top: calc(var(--spacing) * 4);
-  margin-bottom: calc(var(--spacing) * 5);
+  margin-top: calc(var(--spacing) * 2);
+  margin-bottom: -5rem;
 }
 /* end of ABOUT section */
 
@@ -327,12 +317,7 @@ button:hover {
 .toute-la-carte:hover {
   border: 1px solid var(--dark);
   background-color: var(--light);
-  color: var(--dark)
-}
-
-.card-title {
-  font-size: calc(var(--title-font-size) * 1.2);
-
+  color: var(--dark);
 }
 
 /* end of MENU section */
@@ -418,7 +403,7 @@ li {
   box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   max-width: 900px;
   height: 100%;
 }
@@ -592,7 +577,7 @@ footer p {
 @media screen and (min-width: 768px) {
   /* start of ABOUT section */
   .about-p {
-    margin-bottom: calc(var(--spacing) * 3);
+    margin-bottom: calc(var(--spacing) * 2);
   }
 
   .img-toast-box {
@@ -609,7 +594,6 @@ footer p {
 
   .map {
     grid-row: 1/3;
-    max-height: 600px;
   }
   /* END media contact */
 }
@@ -641,17 +625,11 @@ footer p {
   /* start of ABOUT section */
   .about {
     height: 100vh;
-    padding-top: var(--spacing);
-  }
-
-  .about-p {
-    margin-bottom: calc(var(--spacing) * 3);
   }
   
   .img-toast-box {
     height: 250px;
-    width: 80%;
-    margin-top: calc(var(--spacing) * 3);
+    width: 70%;
   }
   /* end of ABOUT section */
 
@@ -673,21 +651,11 @@ footer p {
     height: 100vh;
   }
 
-  
-
-  /* END media contact */
-
-    /*other pages*/
-  .carte-detaillee {
-    background-color: rgb(0, 0, 29);
-    opacity: 90%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 800px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+  .map {
+    max-height: 500px;
   }
-  /* END media other pages */
+  /* END media contact */
+}
 
 /* SPECIAL DESKTOP SCREEN FOR EVENT SECTION */
 @media screen and (min-width: 1550px) {
@@ -698,31 +666,3 @@ footer p {
 /* END SPECIAL DESKTOP SCREEN FOR EVENT SECTION */
 
 /* END MEDIA */
-
-.overlay {
-  position: fixed;
-  left: 0px;
-  top:0px;
-  background-color: rgba(0,0 ,0 , 0.5);
-  width: 100%;
-  height: 100%;
-  z-index:1;
-  display: none;
-}
-
-.popup{
-  margin: 10% auto;
-  width : 70%;
-  background-color: rgb(243, 243, 243);
-  padding: 1em;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  color: var(--dark);
-}
-
-.btnClose {
-  float: right;
-  font-size:16pt;
-  cursor: pointer;
-  color: rgb(26, 26, 26);
-}
