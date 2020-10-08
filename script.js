@@ -5,7 +5,7 @@ const checkbox = document.getElementById("checkbox");
 
 //burgerMenuElem.map((e, i) => e.addEventListener("click", () => checkbox.checked = false))
 for (let i = 0; i < burgerMenuElem.length; i++) {
-  burgerMenuElem[i].addEventListener("click", function() {
+  burgerMenuElem[i].addEventListener("click", function () {
     checkbox.checked = false;
   });
 }
@@ -14,19 +14,19 @@ for (let i = 0; i < burgerMenuElem.length; i++) {
 
 // floating contact button
 
-let contactButton = document.getElementById("contact-button");
+$("body").append('<class="floating-contact-button" title="contact-button">');
 
-const scrollPosition = window.scrollY;
-console.log(contactButton.style.top, scrollPosition);
-
-
-// document.addEventListener(scrollY, fade() {
-//   if (scrollY >= 400) {
-//     contactButton.classList.add("floating-contact-button-fade-out");
-//   } else {
-//     contactButton.classList.remove("floating-contact-button-fade-out");
-//   }
-// });
+if (window.matchMedia("(min-width: 768px)").matches) {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 730) $(".floating-contact-button").fadeOut(600);
+    else $(".floating-contact-button").fadeIn(600);
+  });
+} else {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 850) $(".floating-contact-button").fadeOut(600);
+    else $(".floating-contact-button").fadeIn(600);
+  });
+}
 
 // end of floating contact button
 
@@ -47,26 +47,62 @@ const name = document.getElementById("name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const message = document.getElementById("msg");
+const form = document.getElementById("form");
+const time = document.getElementById("time");
+const people = document.getElementById("people");
+const timed = document.getElementById("date-container");
 
 selector.addEventListener("change", function() {
-  if (selector.value === "reserve" || selector.value === "event") {
+  if (selector.value === "reserve") {
     message.style.display = "block";
+    timed.style.display = "flex";
     date.style.display = "block";
-  } else {
-    message.style.display = "none";
-    date.style.display ="none"
+    people.style.display = "block";
+    time.style.display = "block";
+  }
+  if (selector.value === "event") {
+    message.style.display = "block";
+    timed.style.display = "flex";
+    date.style.display = "block";
+    people.style.display = "none";
+    time.style.display = "none";
   }
   if (selector.value === "question") {
-    message.style.display = "block"
+    message.style.display = "block";
+    date.style.display = "none";
+    timed.style.display = "none";
+  }
+  if (selector.value === "apply") {
+    message.style.display = "block";
+    date.style.display = "none";
+    timed.style.display = "none";
+  }
+  if (selector.value === "") {
+    message.style.display = "none";
+    timed.style.display = "none";
+    date.style.display = "none";
+    people.style.display = "none";
+    time.style.display = "none";
   }
 });
 
-const form = document.getElementById("form");
 form.onsubmit = function (event) {
   event.preventDefault();
-  alert(
-    "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
-  );
+  if (selector.value === "reserve") {
+    alert(
+      `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+    )
+  } else if(selector.value === "event") {
+    alert(`Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+    )
+  } else if(selector.value === "apply") {
+    alert(
+      `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+    )
+  } else {
+    alert(
+      "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
+    )}
 };
 // end of contact section
 
