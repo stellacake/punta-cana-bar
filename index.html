@@ -229,41 +229,49 @@
               class="contact_style"
             ></iframe>
           </div>
-          <form class="form" id="form">
+          <form class="form">
             <div class="formSelect">
               <label for="purpose"></label>
-              <select id="purpose" class="contact_style" required>
+              <select name="purpose" id="purpose" class="contact_style" required>
                 <option value="">Que pouvons-nous faire pour vous ?</option>
                 <option value="reserve">Réserver/Privatiser</option>
-                <option value="event">Proposer un événement</option>
+                <option value="events">Proposer un événement</option>
                 <option value="question">Poser une question</option>
                 <option value="apply">Postuler</option>
               </select>
             </div>
             <div class="formName">
               <label for="name"></label>
-              <input id="name" class="contact_style" placeholder="Entrez votre nom" required/>
+              <input id="name" name="name" class="contact_style" placeholder="Entrez votre nom" required/>
             </div>
             <div class="formMail">
               <label for="email"></label>
-              <input type ="email" id="email" class="contact_style" placeholder="Entrez votre e-mail" required/>
+              <input type="email" name="email" id="email" class="contact_style" placeholder="Entrez votre e-mail" required/>
             </div>
             <div class="formPhone">
               <label for="phone"></label>
-              <input id="phone" class="contact_style" placeholder="Entrez votre numéro de téléphone" required/>
+              <input id="phone" name="phone" class="contact_style" placeholder="Entrez votre numéro de téléphone" required/>
             </div>
-              <label for="date"></label>
               <div id="date-container">
-                <input type="date" id="date" class="contact_style" lang="fr-CA" required>
-                <input type="time" id="time" class="contact_style" required>
-                <input type="number" id="people" class="contact_style" placeholder="Nbre de 🍴" min="0" step="1"/>
-            </div>
+                <input type="date" id="date" class="contact_style" lang="fr-CA">
+                <label for="time"></label>
+                <input name="time" type="time" id="time" class="contact_style">
+                <label for="people"></label>
+                <input name="people" type="number" id="people" class="contact_style" placeholder="Nbre de 🍴" min="0" step="1"/>
+              </div>
             <div class="formMsg">
               <label for="msg"></label>
-              <textarea id="msg" class="contact_style" placeholder="Entrez votre message ici..."></textarea>
+              <textarea  name="msg" id="msg" class="contact_style" placeholder="Entrez votre message ici..."></textarea>
             </div>
-            <div class="formButton">
-              <button type="submit" id="formButton">Envoyer</button>
+            <button id="formButton" class="formButton">Envoyer</button>
+            <div id="overlay" class="overlay">
+              <div id="popup" class="popup">
+                  <h2>MERCI!<span id="btnClose" class="btnClose">&times;</span></h2>
+                  <div id="popup-text_reserve"></div>
+                  <div id="popup-text_events"></div>
+                  <div id="popup-text_question"></div>
+                  <div id="popup-text_apply"></div>
+              </div>
             </div>
           </form>
         </div>

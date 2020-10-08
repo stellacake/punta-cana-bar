@@ -86,117 +86,76 @@ selector.addEventListener("change", function() {
   }
 });
 
-form.onsubmit = function (event) {
-  event.preventDefault();
-  if (selector.value === "reserve") {
-    alert(
-      `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
-    )
-  } else if(selector.value === "event") {
-    alert(`Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
-    )
-  } else if(selector.value === "apply") {
-    alert(
-      `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
-    )
-  } else {
-    alert(
-      "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
-    )}
-};
+// form.onsubmit = function (event) {
+//   event.preventDefault();
+//   if (selector.value === "reserve") {
+//     alert(
+//       `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+//     )
+//   } else if(selector.value === "event") {
+//     alert(`Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+//     )
+//   } else if(selector.value === "apply") {
+//     alert(
+//       `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
+//     )
+//   } else {
+//     alert(
+//       "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
+//     )}
+// };
 // end of contact section
 
-//carousel
-const track = document.querySelector(".carousel_track");
-const slides = Array.from(track.children);
-const nextButton = document.querySelector(".carousel_button--right");
-const prevButton = document.querySelector(".carousel_button--left");
-const dotsNav = document.querySelector(".carousel_nav");
-const dots = Array.from(dotsNav.children);
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+const formButton = document.getElementById('formButton');
+const overlay = document.getElementById('overlay');
+const btnClose = document.getElementById('btnClose');
 
-//arrange the slides next to one another
-slides[0].style.left = slideWidth * 0 + "px";
-slides[1].style.left = slideWidth * 1 + "px";
-slides[2].style.left = slideWidth * 2 + "px";
+const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+const events = `Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+const apply = `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+const basic = "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !";
+const popupR = document.getElementById("popup-text_reserve");
+const popupE = document.getElementById("popup-text_events");
+const popupQ = document.getElementById("popup-text_question");
+const popupA = document.getElementById("popup-text_apply");
 
-// const setSlidePosition = (slide, index) => {
-//   slide.style.left = slideWidth * index + "px";
-// };
-// slide.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
-  currentSlide.classList.remove("current-slide");
-  targetSlide.classList.add("current-slide");
-};
+document.getElementById("popup-text_reserve").textContent = reserve
+document.getElementById("popup-text_events").textContent = events
+document.getElementById("popup-text_question").textContent = basic
+document.getElementById("popup-text_apply").textContent = apply
 
-const updateDots = (currentDot, targetDot) => {
-  currentDot.classList.remove("current-slide");
-  targetDot.classList.add("current-slide");
-};
 
-// const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-//     if (targetIndex === 0) {
-//       prevButton.classList.add("is-hidden");
-//       nextButton.classList.remove("is-hidden");
-//     } else if (targetIndex === slides.length - 1) {
-//       prevButton.classList.remove("is-hidden");
-//       nextButton.classList.add("is-hidden");
-//     } else {
-//       prevButton.classList.remove("is-hidden");
-//       nextButton.classList.add("is-hidden");
-//   }
 
-// when I click left move slides to the left
-prevButton.addEventListener("click", (e) => {
-  const currentSlide = track.querySelector(".current-slide");
-  const prevSlide = currentSlide.previousElementSibling;
-  const currentDot = dotsNav.querySelector(".current-slide");
-  const prevDot = currentDot.previousElementSibling;
-  //   const prevIndex = slides.findIndex((slides) => slide === prevSlide);
-  updateDots(currentDot, prevDot);
-  moveToSlide(track, currentSlide, prevSlide);
-  //   hideShowArrows(slides, prevButton, nextButton, targetIndex);
-});
-// when I click right move slides to the right
-nextButton.addEventListener("click", (e) => {
-  const currentSlide = track.querySelector(".current-slide");
-  const nextSlide = currentSlide.nextElementSibling;
-  const currentDot = dotsNav.querySelector(".current-slide");
-  const nextDot = currentDot.nextElementSibling;
-  //   const nextIndex = slides.findIndex((slides) => slide === nextSlide);
-  moveToSlide(track, currentSlide, nextSlide);
-  updateDots(currentDot, nextDot);
-  //   hideShowArrows(slides, prevButton, nextButton, targetIndex);
-});
 
-//when I click the nav indicator, more to that slide
 
-dotsNav.addEventListener("click", (e) => {
-  //what indicator was clicked on?
-  const targetDot = e.target.closest("button");
+formButton.addEventListener("click", function openModal(event) {
+  event.preventDefault();
+  if(selector.value === "reserve") {
+    popupE.style.display ='none';
+    popupA.style.display ='none';
+    popupQ.style.display='none';
+    overlay.style.display='block'
+  } else if(selector.value === "events") {
+    popupR.style.display ='none';
+    popupA.style.display ='none';
+    popupQ.style.display='none';
+    overlay.style.display='block'
+  } else if(selector.value === "apply") {
+    popupR.style.display ='none';
+    popupE.style.display ='none';
+    popupQ.style.display='none';
+    overlay.style.display='block'
+  } else {
+    popupR.style.display ='none';
+    popupE.style.display ='none';
+    popupA.style.display='none';
+    overlay.style.display='block'
+  }
+})
 
-  if (!targetDot) return;
+btnClose.addEventListener("click", function closeModal() {
+  overlay.style.display='none';
+})
 
-  const currentSlide = track.querySelector(".current-slide");
-  const currentDot = dotsNav.querySelector(".current-slide");
-  const targetIndex = dots.findIndex((dot) => dot === targetDot);
-  const targetSlide = slides[targetIndex];
-
-  moveToSlide(track, currentSlide, targetSlide);
-  updateDots(currentDot, targetDot);
-  // hideShowArrows(slides, prevButton, nextButton, targetIndex)
-
-  //   if (targetIndex === 0) {
-  //     prevButton.classList.add("is-hidden");
-  //     nextButton.classList.remove("is-hidden");
-  //   } else if (targetIndex === slides.length - 1) {
-  //     prevButton.classList.remove("is-hidden");
-  //     nextButton.classList.add("is-hidden");
-  //   } else {
-  //     prevButton.classList.remove("is-hidden");
-  //     nextButton.classList.add("is-hidden");
-  //   }
-});
