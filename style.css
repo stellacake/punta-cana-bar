@@ -316,7 +316,7 @@ button:hover {
 .toute-la-carte:hover {
   border: 1px solid var(--dark);
   background-color: var(--light);
-  color: var(--dark);
+  color: var(--dark)
 }
 
 /* end of MENU section */
