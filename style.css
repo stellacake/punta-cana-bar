@@ -214,6 +214,24 @@ button:hover {
   background-size: cover;
 }
 
+.carte-detaillee-box {
+  text-align: center;
+  background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
+  padding: calc(var(--spacing) * 2);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.carte-detaillee {
+  background-color: rgb(0, 0, 29);
+  opacity: 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
 .about-box {
     text-align: center;
     background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
@@ -310,6 +328,11 @@ button:hover {
   border: 1px solid var(--dark);
   background-color: var(--light);
   color: var(--dark)
+}
+
+.card-title {
+  font-size: calc(var(--title-font-size) * 1.2);
+
 }
 
 /* end of MENU section */
@@ -650,8 +673,21 @@ footer p {
     height: 100vh;
   }
 
+  
+
   /* END media contact */
 
+    /*other pages*/
+  .carte-detaillee {
+    background-color: rgb(0, 0, 29);
+    opacity: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  /* END media other pages */
 
 /* SPECIAL DESKTOP SCREEN FOR EVENT SECTION */
 @media screen and (min-width: 1550px) {
