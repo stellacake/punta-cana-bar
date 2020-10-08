@@ -218,7 +218,6 @@ button:hover {
     text-align: center;
     background-color: linear-gradient(rgb(184, 170, 196), rgb(255, 255, 255));
     padding: calc(var(--spacing) * 2);
-    margin-bottom: 5rem;
 }
 
 .about h2 {
@@ -236,7 +235,8 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
-  margin-top: calc(var(--spacing) * 7);
+  margin-top: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 5);
 }
 /* end of ABOUT section */
 
@@ -569,7 +569,7 @@ footer p {
 @media screen and (min-width: 768px) {
   /* start of ABOUT section */
   .about-p {
-    margin-bottom: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 3);
   }
 
   .img-toast-box {
@@ -618,10 +618,15 @@ footer p {
   .about {
     height: 100vh;
   }
+
+  .about-p {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
   
   .img-toast-box {
-    height: 250px;
-    width: 70%;
+    height: 275px;
+    width: 80%;
+    margin-top: calc(var(--spacing) * 3);
   }
   /* end of ABOUT section */
 
