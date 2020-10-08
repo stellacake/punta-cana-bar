@@ -618,6 +618,7 @@ footer p {
   /* start of ABOUT section */
   .about {
     height: 100vh;
+    padding-top: var(--spacing);
   }
 
   .about-p {
@@ -625,7 +626,7 @@ footer p {
   }
   
   .img-toast-box {
-    height: 275px;
+    height: 250px;
     width: 80%;
     margin-top: calc(var(--spacing) * 3);
   }
