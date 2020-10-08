@@ -1,16 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Notre carte</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bienvenue au Punta Cana Bar</title>
+  </head>
 
-</body>
+  <body>
+    <header>
+      <nav id="burgerToggle">
+        <input type="checkbox" id="checkbox" />
+        <img src="./img/burger_icon.svg.png" alt="menu icon" id="burgerLogo" />
+        <ul id="burgerMenu">
+          <a href="#home">
+            <li class="burgerMenu-elem">
+              <h1>Punta Cana Bar</h1>
+            </li>
+          </a>
+          <a href="#about">
+            <li class="burgerMenu-elem">Le bar</li>
+          </a>
+          <a href="#menu">
+            <li class="burgerMenu-elem">La carte</li>
+          </a>
+          <a href="#events">
+            <li class="burgerMenu-elem">Nos événements</li>
+          </a>
+          <a href="#contact">
+            <li class="burgerMenu-elem">Nous contacter</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <section class="menu" id="menu">
+      <h2>Les stars du moment</h2>
+      <section class="carousel">
+        <ul class="carousel-items">
+          <li class="carousel-item">
+            <div class="card">
+              <h3 class="card-title">Le Martini cerise</h3>
+              <img class="photo-cocktail" src="./img/cocktail1.png" />
+              <div class="card-content">
+                <p>Du Martini, des Cerises, what else?</p>
+                <!-- <a href="#" class="formButton" id="#formButton">Toute la carte</a> -->
+              </div>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="card">
+              <h3 class="card-title">Cocktail 2</h3>
+              <img class="photo-cocktail" src="./img/cocktail2.png" />
+              <div class="card-content">
+                <p>Déccouvrez le cocktail du mois</p>
+                <!-- <a href="#" class="button">Toute la carte</a> -->
+              </div>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="card">
+              <h3 class="card-title">Cocktail 3</h3>
+              <img class="photo-cocktail" src="./img/cocktail3.png" />
+              <div class="card-content">
+                <p>Déccouvrez le cocktail du mois</p>
+                <!-- <a href="#" class="button">Toute la carte</a> -->
+              </div>
+            </div>
+          </li>
+          <li class="carousel-item">
+            <div class="card">
+              <h3 class="card-title">Cocktail 4</h3>
+              <img class="photo-cocktail" src="./img/cocktail4.png" />
+              <div class="card-content">
+                <p>Déccouvrez le cocktail du mois</p>
+                <!-- <a href="#" class="button">Toute la carte</a> -->
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section class="carte-detaillee" id="about">
+      <div class="about-box">
+        <h2>Toute la carte</h2>
+        <p>
+          COCKTAILS DAIQUIRI MANGUE10 € Rhum, sucre de canne, mangue, jus de
+          citron vert PIÑA COLADA10 € Rhum, lait de coco, jus d’ananas PUNCH
+          PLANTEUR9 € Rhum, jus d’orange, jus d’ananas jus de goyave MARGARITA9
+          € Tequila, Cointreau, jus de citron vert TEQUILA SUNRISE9 € Tequila,
+          jus d’orange, grenadine COSMOPOLITAN9 € Vodka, liqueur d’orange,
+          cranberry, jus de citron vert MOSCOW MULE9 € Vodka, ginger beer, jus
+          de citron vert BLOODY MARY9 € Vodka, jus de tomate, jus de citron
+          vert, poivre de Kampot PEACH ON THE BEACH9 € Vodka, crème de pêche,
+          cranberry, jus d’orange STRAWBERRY KISS9 € Gin, crème de framboise,
+          jus de fraise, jus de citron vert COCKTAILS SANS ALCOOL MOJITO SANS
+          ALCOOL5 € SOLEIL5 € Jus d’orange, jus d’ananas, sirop de grenadine
+          ANGELINA5 € Jus d’orange, jus de goyave, jus de mangue, sirop de
+          fraise JASMIN5 € Jus de goyave, jus de fraise, jus d’ananas VIRGIN
+          MARY5 € Jus de tomates, jus de citron, Worcestershire sauce, poivre de
+          kampot
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-networks">
+        <a
+          href="https://www.tripadvisor.fr/Attraction_Review-g187079-d6608060-Reviews-Punta_Cana_Bar_Tapas-Bordeaux_Gironde_Nouvelle_Aquitaine.html"
+          ><img class="icon" src="./img/icon-facebook.svg"
+        /></a>
+        <a
+          href="https://www.facebook.com/puntacana.bartapas/?rf=265506510133879"
+          ><img class="icon" src="./img/icon-tripadvisor.svg"
+        /></a>
+      </div>
+      <div class="footer-credits">
+        <p>Développé sans influence de l'alcool</p>
+        <p>&copy; Punta Cana Bar 2020</p>
+      </div>
+      <div class="footer-legal">
+        <p>Mentions légales</p>
+        <p>RGPD</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
