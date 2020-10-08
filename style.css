@@ -176,6 +176,7 @@ button:hover {
 
 /* beginning of HOME section */
 .home {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
