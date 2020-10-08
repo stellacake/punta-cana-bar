@@ -86,52 +86,30 @@ selector.addEventListener("change", function() {
   }
 });
 
-// form.onsubmit = function (event) {
-//   event.preventDefault();
-//   if (selector.value === "reserve") {
-//     alert(
-//       `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
-//     )
-//   } else if(selector.value === "event") {
-//     alert(`Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
-//     )
-//   } else if(selector.value === "apply") {
-//     alert(
-//       `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`
-//     )
-//   } else {
-//     alert(
-//       "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !"
-//     )}
-// };
-// end of contact section
-
+// POPUP
 
 const formButton = document.getElementById('formButton');
 const overlay = document.getElementById('overlay');
 const btnClose = document.getElementById('btnClose');
-
-const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-const events = `Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-const apply = `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-const basic = "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !";
+// const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+// const events = `Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+// const apply = `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+// const basic = "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !";
 const popupR = document.getElementById("popup-text_reserve");
 const popupE = document.getElementById("popup-text_events");
 const popupQ = document.getElementById("popup-text_question");
 const popupA = document.getElementById("popup-text_apply");
 
-
-document.getElementById("popup-text_reserve").textContent = reserve
-document.getElementById("popup-text_events").textContent = events
-document.getElementById("popup-text_question").textContent = basic
-document.getElementById("popup-text_apply").textContent = apply
-
-
-
-
-
 formButton.addEventListener("click", function openModal(event) {
   event.preventDefault();
+  const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+  const events = `Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+  const apply = `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
+  const basic = "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !";
+  document.getElementById("popup-text_reserve").innerText = reserve;
+  document.getElementById("popup-text_events").innerHTML = events;
+  document.getElementById("popup-text_question").innerHTML = basic;
+  document.getElementById("popup-text_apply").innerText = apply;
   if(selector.value === "reserve") {
     popupE.style.display ='none';
     popupA.style.display ='none';
@@ -158,4 +136,8 @@ formButton.addEventListener("click", function openModal(event) {
 btnClose.addEventListener("click", function closeModal() {
   overlay.style.display='none';
 })
+// end of contact section
+
+
+
 
