@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Bienvenue au Punta Cana Bar</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./cocktail.ico">
+    <title>El Punta Cana Bar</title>
   </head>
 
 <body>
@@ -17,7 +18,6 @@
       <input type="checkbox" id="checkbox" />
       <img src="./img/burger_icon.svg.png" alt="menu icon" id="burgerLogo" />
       <ul id="burgerMenu">
-
         <a href="#home">
           <li class="burgerMenu-elem">
             <h1>Punta Cana Bar</h1>
@@ -79,28 +79,51 @@
 
   <section class="menu" id="menu">
     <h2>La carte</h2>
-    <div class="carousel">
-      <button class="carousel_button carousel_button--left"></button>
-      <div class="carousel_track-container">
-        <ul class="carousel_track">
-          <li class="carousel_slide current-slide">
-            <img class="carousel_image" src="https://source.unsplash.com/random" alt="" />
+    <section class="carousel">
+      <ul class="carousel-items">
+          <li class="carousel-item">
+              <div class="card">
+                  <h3 class="card-title">Le Martini cerise</h3>
+                  <img class="photo-cocktail" src="./img/cocktail1.png" />
+                  <div class="card-content">
+                      <p>Du Martini, des Cerises, what else?</p>
+                      <!-- <a href="#" class="formButton" id="#formButton">Toute la carte</a> -->
+                  </div>
+              </div>
           </li>
-          <li class="carousel_slide">
-            <img class="carousel_image" src="https://picsum.photos/200/300" alt="" />
+          <li class="carousel-item">
+              <div class="card">
+                  <h3 class="card-title">Cocktail 2</h3>
+                  <img class="photo-cocktail" src="./img/cocktail2.png" />
+                  <div class="card-content">
+                      <p>Déccouvrez le cocktail du mois</p>
+                      <!-- <a href="#" class="button">Toute la carte</a> -->
+                  </div>
+              </div>
           </li>
-          <li class="carousel_slide">
-            <img class="carousel_image" src="http://placeimg.com/640/360/any" alt="" />
+          <li class="carousel-item">
+              <div class="card">
+                  <h3 class="card-title">Cocktail 3</h3>
+                  <img class="photo-cocktail" src="./img/cocktail3.png" />
+                  <div class="card-content">
+                      <p>Déccouvrez le cocktail du mois</p>
+                      <!-- <a href="#" class="button">Toute la carte</a> -->
+                  </div>
+              </div>
           </li>
-        </ul>
-      </div>
-      <button class="carousel_button carousel_button--right">></button>
-      <div class="carousel_nav">
-        <button class="carousel_indicator current-slide"></button>
-        <button class="carousel_indicator"></button>
-        <button class="carousel_indicator"></button>
-      </div>
-    </div>
+          <li class="carousel-item">
+              <div class="card">
+                  <h3 class="card-title">Cocktail 4</h3>
+                  <img class="photo-cocktail" src="./img/cocktail4.png" />
+                  <div class="card-content">
+                      <p>Déccouvrez le cocktail du mois</p>
+                      <!-- <a href="#" class="button">Toute la carte</a> -->
+                  </div>
+              </div>
+          </li>
+      </ul>
+      <div class="toute-la-carte"><a href="carte.html">Découvrez toute notre carte</a> </div>
+  </section>
   </section>
 
   <section class="events" id="events">
@@ -186,9 +209,9 @@
         <div class ="contact-body">
           <div class="info">
             <p>On vous accueille du <strong>mercredi au samedi, de&nbsp;18h&nbsp;à&nbsp;2h&nbsp;!</strong> Venez nombreux !</p>
-            <a href="https://www.google.com/maps/place/Punta+Cana+Bar/@44.840034,-0.563428,14z/data=!4m5!3m4!1s0x0:0x446e62f5b8ba5848!8m2!3d44.8395898!4d-0.5597911?hl=fr"><h3>1 Quai Deschamps</h3></a>
+            <a href="https://www.google.com/maps/place/Punta+Cana+Bar/@44.840034,-0.563428,14z/data=!4m5!3m4!1s0x0:0x446e62f5b8ba5848!8m2!3d44.8395898!4d-0.5597911?hl=fr" target="_blank"><h3>1 Quai Deschamps</h3></a>
             <h3>33000 Bordeaux</h3>
-            <a href="tel:06 58 50 03 32"><h3>📞 06 58 50 03 32</h3></a>
+            <a href="tel:06 58 50 03 32"><h3><img src="./img/phone.png" height=18px/> 06 58 50 03 32</h3></a>
           </div>
           <div class="map">
             <iframe
@@ -230,7 +253,7 @@
               <div id="date-container">
                 <input type="date" id="date" class="contact_style" lang="fr-CA" required>
                 <input type="time" id="time" class="contact_style" required>
-                <input type="number" id="people" class="contact_style" min="0" step="1"/>
+                <input type="number" id="people" class="contact_style" placeholder="Nbre de 🍴" min="0" step="1"/>
             </div>
             <div class="formMsg">
               <label for="msg"></label>
@@ -247,10 +270,10 @@
   <footer>
     <div class="footer-networks">
       <a
-        href="https://www.tripadvisor.fr/Attraction_Review-g187079-d6608060-Reviews-Punta_Cana_Bar_Tapas-Bordeaux_Gironde_Nouvelle_Aquitaine.html"><img
+        href="https://www.facebook.com/puntacana.bartapas/?rf=265506510133879" target="_blank"><img
           class="icon" src="./img/icon-facebook.svg" /></a>
-      <a href="https://www.facebook.com/puntacana.bartapas/?rf=265506510133879"><img class="icon"
-          src="./img/icon-tripadvisor.svg" /></a>
+      <a href="https://www.tripadvisor.fr/Attraction_Review-g187079-d6608060-Reviews-Punta_Cana_Bar_Tapas-Bordeaux_Gironde_Nouvelle_Aquitaine.html" target="_blank"><img class="icon"
+          src="./img/icon-tripadvisor.svg"/></a>
     </div>
     <div class="footer-credits">
       <p>Développé sans influence de l'alcool</p>
