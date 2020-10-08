@@ -98,10 +98,10 @@ const popupA = document.getElementById("popup-text_apply");
 
 formButton.addEventListener("click", function openModal(event) {
   event.preventDefault();
-  const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte. Nous vous envoyons un mail de confirmation à l'adresse ${email.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-  const events = `Votre demande a bien été prise en compte. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-  const apply = `Votre candidature a bien été envoyée. On vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}. Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !`;
-  const basic = "Votre message a bien été envoyé ! Merci de votre intérêt pour la Punta Cana, on se retrouve bientôt autour d'un mojito !";
+  const reserve = `Votre réservation du ${date.value} à ${time.value} pour ${people.value} personne(s) a bien été prise en compte.\nNous vous envoyons un mail de confirmation à l'adresse ${email.value}.\nMerci de votre intérêt pour le Punta Cana Bar\u00a0!\nOn se retrouve bientôt autour d'un cocktail\u00a0:)`;
+  const events = `Votre demande a bien été prise en compte.\nOn vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}.\nMerci de votre intérêt pour le Punta Cana Bar\u00a0!\nOn se retrouve bientôt autour d'un cocktail\u00a0:)`;
+  const apply = `Votre candidature a bien été envoyée.\nOn vous re-contacte au plus vite à l'adresse ${email.value} ou par téléphone au ${phone.value}.\nMerci de votre intérêt pour le Punta Cana Bar\u00a0!\nOn se retrouve bientôt autour d'un cocktail\u00a0:)`;
+  const basic = "Votre message a bien été envoyé\u00a0!\nMerci de votre intérêt pour le Punta Cana Bar\u00a0!\nOn se retrouve bientôt autour d'un cocktail\u00a0:)";
   document.getElementById("popup-text_reserve").innerText = reserve;
   document.getElementById("popup-text_events").innerHTML = events;
   document.getElementById("popup-text_question").innerHTML = basic;
