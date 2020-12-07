@@ -1,4 +1,4 @@
-# punta-cana-website
+# punta-cana-bar
 
 #EN
 Project 1 (training) done at Wild Code School in Bordeaux, France.
